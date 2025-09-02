@@ -35,7 +35,7 @@ const socialLinks = [
   { href: 'https://github.com/josegomez-dev', icon: Github, label: 'GitHub' },
   { href: 'https://www.linkedin.com/in/josealejandrogomezcastro/', icon: Linkedin, label: 'LinkedIn' },
   { href: 'https://medium.com/@josegomezdev', icon: ExternalLink, label: 'Medium' },
-  { href: 'https://discord.gg/your-discord', icon: DiscordIcon, label: 'Discord' },
+  { href: 'https://discord.gg/josegomezdev', icon: DiscordIcon, label: 'Discord' },
   { href: 'https://x.com/josegomez_dev', icon: XIcon, label: 'X (Twitter)' },
   { href: 'https://t.me/josegomezdev', icon: TelegramIcon, label: 'Telegram' },
 ]
@@ -58,7 +58,7 @@ export function Navbar() {
               whileHover={{ scale: 1.05 }}
               className="text-xl font-bold"
             >
-              <img src="/media/avatar.jpg" alt="José Alejandro Gómez Castro" className="w-20 h-20 rounded-b-2xl" />
+              <img src="/media/avatar.jpg" alt="José Alejandro Gómez Castro" className="w-20 h-20 rounded-full" />
             </motion.div>
           </Link>
 
