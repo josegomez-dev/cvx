@@ -10,7 +10,7 @@
 
 **Senior Full-Stack Developer specializing in Web3, React, and modern web technologies**
 
-[🌐 Live Portfolio](https://your-portfolio-url.com) • [📧 Contact](mailto:josegomezdev@gmail.com) • [💼 LinkedIn](https://www.linkedin.com/in/josealejandrogomezcastro/)
+[🌐 Live Portfolio](https://your-portfolio-url.com) • [📧 Contact](mailto:josegomez.dev@gmail.com) • [💼 LinkedIn](https://www.linkedin.com/in/josealejandrogomezcastro/)
 
 </div>
 
@@ -18,7 +18,7 @@
 
 ## 🎯 Professional Summary
 
-Senior Full-Stack Developer with 8+ years of experience building scalable web applications and Web3 solutions. Proven track record of delivering high-impact projects for enterprise clients including Fasken Baker McKenzie, FoundationLab LLC, and leading Web3 protocols like Starknet. Expert in React ecosystem, TypeScript, and blockchain development with a strong focus on performance optimization and user experience.
+Senior Full-Stack Developer with 10+ years of experience building scalable web applications and Web3 solutions. Proven track record of delivering high-impact projects for enterprise clients including Fasken Baker McKenzie, FoundationLab LLC, and leading Web3 protocols like Starknet. Expert in React ecosystem, TypeScript, and blockchain development with a strong focus on performance optimization and user experience.
 
 ## 🏆 Key Achievements
 
@@ -133,7 +133,6 @@ Senior Full-Stack Developer with 8+ years of experience building scalable web ap
 - **BIOSOFT** | Universidad Cenfotec, Costa Rica (2015)
 
 ### **Professional Certifications**
-- **Starknet Basecamp Graduate** | Starknet (2024)
 - **DevOps Fundamentals** | Certiprof (2023)
 - **Certified Scrum Master** | Certiprof (2023)
 - **Ethereum Developer Pack (Solidity)** | Ethereum Costa Rica (2022)
@@ -144,16 +143,7 @@ Senior Full-Stack Developer with 8+ years of experience building scalable web ap
 - **Advanced React Components** | EggHead.io (2018)
 - **Full-stack Developer Track** | TeamTreehouse (2017)
 
-## 📊 Performance Metrics
 
-| Metric | Achievement | Industry Standard |
-|--------|-------------|-------------------|
-| **Years of Experience** | 8+ years | Senior level |
-| **Projects Delivered** | 15+ production apps | High output |
-| **Hackathon Wins** | 2nd Place Starknet 2025 | Competitive |
-| **Enterprise Clients** | 3 major companies | Strong portfolio |
-| **Technical Articles** | 4 published guides | Thought leadership |
-| **Performance Score** | 95+ Lighthouse | Excellent |
 
 ## 🎯 Technical Leadership
 
@@ -186,7 +176,6 @@ Senior Full-Stack Developer with 8+ years of experience building scalable web ap
 ## 🔮 Future Focus
 
 ### **Technology Roadmap**
-- **AI Integration**: GPT-powered content generation and automation
 - **Advanced Web3**: DeFi protocols, cross-chain interoperability
 - **Micro-frontends**: Scalable architecture for enterprise applications
 - **Performance**: Advanced optimization techniques and monitoring
@@ -202,7 +191,7 @@ Senior Full-Stack Developer with 8+ years of experience building scalable web ap
 - **Portfolio**: [Live Digital CV](https://your-portfolio-url.com)
 - **GitHub**: [@josegomez-dev](https://github.com/josegomez-dev)
 - **LinkedIn**: [José Alejandro Gómez Castro](https://www.linkedin.com/in/josealejandrogomezcastro/)
-- **Email**: josegomezdev@gmail.com
+- **Email**: josegomez.dev@gmail.com
 - **Medium**: [@josegomezdev](https://medium.com/@josegomezdev)
 - **Location**: Costa Rica (Open to remote opportunities)
 

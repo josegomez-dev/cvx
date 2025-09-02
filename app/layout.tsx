@@ -9,6 +9,11 @@ export const metadata: Metadata = {
   description: 'Next-Gen Web3 Open Source Developer',
   keywords: ['Web3', 'Developer', 'Blockchain', 'Open Source'],
   authors: [{ name: 'José Alejandro Gómez Castro' }],
+  icons: {
+    icon: '/media/favicon.ico',
+    shortcut: '/media/favicon.ico',
+    apple: '/media/favicon.ico',
+  },
   openGraph: {
     title: 'José Alejandro Gómez Castro | Next-Gen Web3 Open Source Developer',
     description: 'Next-Gen Web3 Open Source Developer',

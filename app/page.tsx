@@ -202,6 +202,29 @@ export default function HomePage() {
               >
                 📅 Schedule a Meeting
               </motion.a>
+              
+              <motion.a 
+                href="https://play.workadventu.re/@/stellar-nexus-experience-1756770824/stellarnexusexperience/conference-campus" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="inline-flex items-center space-x-1.5 px-4 py-2 rounded-lg bg-accent/10 text-accent hover:bg-accent/20 transition-all duration-200 text-sm font-medium cursor-pointer border border-accent/20 hover:border-accent/40"
+                whileHover={{ scale: 1.02, y: -1 }}
+                whileTap={{ scale: 0.98 }}
+                animate={{ 
+                  boxShadow: [
+                    "0 0 0 rgba(255, 77, 255, 0)",
+                    "0 0 8px rgba(255, 77, 255, 0.2)",
+                    "0 0 0 rgba(255, 77, 255, 0)"
+                  ]
+                }}
+                transition={{ 
+                  duration: 3,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+              >
+                🏢 Virtual Office Access
+              </motion.a>
             </div>
           </div>
         </div>
