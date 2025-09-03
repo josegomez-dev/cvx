@@ -56,7 +56,7 @@ export function Navbar() {
               whileHover={{ scale: 1.05 }}
               className="text-xl font-bold relative"
             >
-              <img src="/media/avatar.jpg" alt="José Alejandro Gómez Castro" className="w-10 h-10 rounded-full profile-photo" />
+              <img src="/logo.png" alt="José Alejandro Gómez Castro" className="w-10 h-10 rounded-full profile-photo" />
               
               {/* Funny Go Back Arrow - Only show when not on home page */}
               {pathname !== '/' && (
