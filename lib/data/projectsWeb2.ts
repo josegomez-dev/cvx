@@ -18,7 +18,10 @@ export const projectsWeb2: Web2Project[] = [
     stack: ['IONIC', 'Hybrid', 'iOS'],
     summary: 'Cross-platform mobile solution for social responsibility initiatives. This experience introduced me to hybrid app development, mobile UI/UX design, and deploying apps for Apple devices.',
     links: [
-      { label: 'Non-profit organization', url: 'https://www.instagram.com/accionsr/' } 
+      { label: 'Non-profit organization', url: 'https://www.instagram.com/accionsr/' },
+      { label: 'Press Release', url: 'https://www.linkedin.com/in/josealejandrogomezcastro/details/experience/' },
+      { label: 'Radio Nacional STAR', url: 'https://www.youtube.com/watch?v=cGD6dkGVgEA&pp=ygUXcmFkaW8gbmFjaW9uYWwgYWNjaW9uc3I%3D' },
+      { label: 'Radio Digital STAR', url: 'https://www.youtube.com/watch?v=a8sNCh2Q89E' },
     ],
     company: 'YesDuet',
     role: 'Co-Founder',

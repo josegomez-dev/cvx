@@ -4,6 +4,7 @@ import { Navbar } from '@/components/Navbar'
 import { Footer } from '@/components/Footer'
 import AIChatManager from '@/components/AIChatManager'
 import { CustomCursor } from '@/components/CustomCursor'
+import { WalletSidebarManager } from '@/components/WalletSidebarManager'
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'),
@@ -43,8 +44,9 @@ export default function RootLayout({
           <main className="min-h-screen">
             {children}
           </main>
-          <Footer />
-          <AIChatManager />
+                            <Footer />
+                  <AIChatManager />
+                  <WalletSidebarManager />
         </CustomCursor>
       </body>
     </html>

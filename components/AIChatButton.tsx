@@ -19,7 +19,6 @@ export default function AIChatButton({ onOpenChat }: AIChatButtonProps) {
     "⚡ Quick business proposals & project ideas",
     "🎯 Get personalized development guidance",
     "🚀 Explore next-gen Web3 technologies",
-    "💡 Free AI chat - no API costs!",
     "🔍 CVX Developer Console - navigate portfolio",
     "✨ Magic AI button - try it now!",
     "🎪 Interactive AI experience",
@@ -48,7 +47,7 @@ export default function AIChatButton({ onOpenChat }: AIChatButtonProps) {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 10, scale: 0.8 }}
             transition={{ duration: 0.3, type: "spring", stiffness: 300 }}
-            className="absolute bottom-20 right-0 mb-3 bg-black/80 backdrop-blur-md border border-white/20 rounded-xl p-3 shadow-2xl max-w-xs"
+            className="absolute bottom-20 right-0 mb-3 bg-black/80 backdrop-blur-md border border-white/20 rounded-xl p-3 shadow-2xl max-w-xs z-[999999] mr-16"
           >
             <motion.div
               key={currentTooltipIndex}
@@ -72,7 +71,7 @@ export default function AIChatButton({ onOpenChat }: AIChatButtonProps) {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.8 }}
-            className="absolute bottom-16 right-0 mb-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-4 shadow-2xl"
+            className="absolute bottom-16 right-0 mb-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-4 shadow-2xl mr-16"
           >
             <div className="space-y-3">
               <motion.button

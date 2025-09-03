@@ -14,6 +14,7 @@ export function CustomCursor({ children }: CustomCursorProps) {
   const [isHoveringButton, setIsHoveringButton] = useState(false)
   const [isHoveringName, setIsHoveringName] = useState(false)
   const [isHoveringPhoto, setIsHoveringPhoto] = useState(false)
+  const [isHoveringWallet, setIsHoveringWallet] = useState(false)
   const pathname = usePathname()
   const isHomePage = pathname === '/'
   const isTechPage = pathname === '/tech'
@@ -41,11 +42,14 @@ export function CustomCursor({ children }: CustomCursorProps) {
         setIsHoveringName(true)
       } else if (target.closest('.tech-card-title') || target.closest('[data-cursor="tech-card-title"]')) {
         setIsHovering(true)
+      } else if (target.closest('.wallet-button') || target.closest('[data-cursor="wallet"]')) {
+        setIsHoveringWallet(true)
       } else {
         setIsHovering(false)
         setIsHoveringButton(false)
         setIsHoveringName(false)
         setIsHoveringPhoto(false)
+        setIsHoveringWallet(false)
       }
     }
 
@@ -72,8 +76,8 @@ export function CustomCursor({ children }: CustomCursorProps) {
         animate={{
           x: mousePosition.x - 16,
           y: mousePosition.y - 16,
-          scale: isHovering || isHoveringButton || isHoveringName || isHoveringPhoto ? 1.5 : 1,
-          opacity: (isHomePage || isTechPage) && (isHovering || isHoveringButton || isHoveringName || isHoveringPhoto) ? 1 : 0,
+          scale: isHovering || isHoveringButton || isHoveringName || isHoveringPhoto || isHoveringWallet ? 1.5 : 1,
+          opacity: (isHomePage || isTechPage) && (isHovering || isHoveringButton || isHoveringName || isHoveringPhoto || isHoveringWallet) ? 1 : 0,
         }}
         transition={{
           type: "spring",
@@ -180,7 +184,18 @@ export function CustomCursor({ children }: CustomCursorProps) {
           .tech-name:hover *,
           .tech-card-title:hover *,
           .ai-button:hover *,
-          .profile-photo:hover * {
+          .profile-photo:hover *,
+          .wallet-button:hover * {
+            cursor: none !important;
+          }
+        ` : ''}
+        
+        ${isHomePage ? `
+          .card:hover *,
+          .ai-button:hover *,
+          .name-text:hover *,
+          .profile-photo:hover *,
+          .wallet-button:hover * {
             cursor: none !important;
           }
         ` : ''}

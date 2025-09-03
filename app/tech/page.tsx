@@ -166,23 +166,6 @@ export default function TechPage() {
           <div className="card p-6">
                           <h3 className="text-xl font-bold text-primary mb-4 tech-card-title">Experience Highlights</h3>
             <ul className="space-y-3 dark:text-white/80 light:text-gray-700">
-                             <li>• 10+ years shipping web & mobile apps |&nbsp;
-                 <motion.a href="https://www.youtube.com/watch?v=cGD6dkGVgEA&t=174s" target="_blank" rel="noopener noreferrer" className="inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-lg bg-green-500/10 text-green-400 hover:bg-green-500/20 transition-all duration-200 text-sm font-medium cursor-pointer border border-green-500/20 hover:border-green-500/40"
-                   whileHover={{ scale: 1.02, y: -1 }}
-                   whileTap={{ scale: 0.98 }}
-                   animate={{ 
-                     boxShadow: [
-                       "0 0 0 rgba(34, 197, 94, 0)",
-                       "0 0 8px rgba(34, 197, 94, 0.2)",
-                       "0 0 0 rgba(34, 197, 94, 0)"
-                     ]
-                   }}
-                   transition={{ 
-                     duration: 3,
-                     repeat: Infinity,
-                     ease: "easeInOut"
-                   }}>🍼 First App experience</motion.a>
-               </li>
               <li>• <motion.a href="https://github.com/josegomez-dev" target="_blank" rel="noopener noreferrer" className="inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-lg bg-primary/10 text-primary hover:bg-primary/20 transition-all duration-200 text-sm font-medium cursor-pointer border border-primary/20 hover:border-primary/40"
                   whileHover={{ scale: 1.02, y: -1 }}
                   whileTap={{ scale: 0.98 }}
