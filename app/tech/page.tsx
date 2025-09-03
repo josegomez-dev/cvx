@@ -238,7 +238,7 @@ export default function TechPage() {
                   }}
                 >💻 Open source contributor</motion.a> and community builder</li>
               <li>• <motion.a 
-                  href="https://speedrunethereum.com/profile" 
+                  href="https://speedrunethereum.com/builders/0x9391A141b5409d7c14DbAbd0F9FE3B92C331387e" 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-lg bg-accent/10 text-accent hover:bg-accent/20 transition-all duration-200 text-sm font-medium cursor-pointer border border-accent/20 hover:border-accent/40"
