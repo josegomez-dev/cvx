@@ -82,7 +82,7 @@ export class WalletService {
   // Stellar Connection (Freighter)
   async connectFreighter(): Promise<WalletConnection> {
     try {
-      if (typeof window !== 'undefined' && (window as any).stellar) {
+      if (typeof window !== 'undefined' && window.stellar) {
         // For now, simulate Freighter connection
         // In a real implementation, you'd use the Freighter API
         const mockAddress = 'G' + Math.random().toString(36).slice(2, 34).toUpperCase()
@@ -134,20 +134,24 @@ export class WalletService {
 
   // Check if Starknet wallet is available
   isStarknetAvailable(): boolean {
-    return typeof window !== 'undefined' && !!(window as any).starknet
+    return typeof window !== 'undefined' && !!window.starknet
   }
 
   // Check if Freighter is available
   isFreighterAvailable(): boolean {
-    return typeof window !== 'undefined' && !!(window as any).stellar
+    return typeof window !== 'undefined' && !!window.stellar
   }
 }
 
 // Extend Window interface for TypeScript
 declare global {
   interface Window {
-    ethereum?: any
-    starknet?: any
-    stellar?: any
+    ethereum?: {
+      request: (args: { method: string; params?: any[] }) => Promise<any>;
+      on: (eventName: string, handler: (params: any) => void) => void;
+      removeListener: (eventName: string, handler: (params: any) => void) => void;
+    };
+    starknet?: unknown;
+    stellar?: unknown;
   }
 }

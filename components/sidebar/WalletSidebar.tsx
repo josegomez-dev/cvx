@@ -358,7 +358,7 @@ export function WalletSidebar({ isOpen, onToggle }: WalletSidebarProps) {
               ].map((tab) => (
                 <button
                   key={tab.id}
-                  onClick={() => setActiveTab(tab.id as any)}
+                  onClick={() => setActiveTab(tab.id as 'wallets' | 'payments' | 'patreon')}
                   className={`flex-1 py-3 px-4 text-sm font-medium transition-all duration-200 ${
                     activeTab === tab.id
                       ? 'text-white bg-white/10 border-b-2 border-purple-500'

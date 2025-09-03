@@ -1,9 +1,9 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Code, Music, ArrowRight, Map } from 'lucide-react'
+import { Code, Music, Map } from 'lucide-react'
 import Link from 'next/link'
-import { CertifiedBadge } from '@/components/ui/CertifiedBadge'
+
 import { RotatingPhrases } from '@/components/animations/RotatingPhrases'
 import { TypewriterSubtitle } from '@/components/animations/TypewriterSubtitle'
 import { TiltCard } from '@/components/ui/TiltCard'

@@ -224,7 +224,7 @@ export function TiltCard({
                   }}
                 >
                   {badge.variant ? (
-                    <CertifiedBadge variant={badge.variant as any} hasStar={badge.hasStar}>
+                    <CertifiedBadge variant={badge.variant as 'scrum' | 'dev' | 'devops' | 'web3'} hasStar={badge.hasStar}>
                       {badge.text}
                     </CertifiedBadge>
                   ) : (

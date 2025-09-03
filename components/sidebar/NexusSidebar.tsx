@@ -5,7 +5,10 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight, Terminal, Zap, Settings, X, Minimize2, Maximize2 } from 'lucide-react';
 import DeveloperConsole from '../web3/DeveloperConsole';
 
-interface NexusSidebarProps {}
+interface NexusSidebarProps {
+  // Add props if needed in the future
+  // eslint-disable-next-line @typescript-eslint/no-empty-object-type
+}
 
 export default function DeveloperSidebar({}: NexusSidebarProps) {
   const [isOpen, setIsOpen] = useState(true);
@@ -157,8 +160,8 @@ export default function DeveloperSidebar({}: NexusSidebarProps) {
                     <div>
                       <h3 className="text-white font-semibold text-lg mb-2">Welcome to CVx Console</h3>
                       <p className="text-white/60 text-sm mb-4">
-                        Interactive developer terminal with José's background, 
-                        projects, and technical information. Type 'help' to get started!
+                        Interactive developer terminal with José&apos;s background, 
+                        projects, and technical information. Type &apos;help&apos; to get started!
                       </p>
                     </div>
                     <motion.button

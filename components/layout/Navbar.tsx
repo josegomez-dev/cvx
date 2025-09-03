@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { motion } from 'framer-motion'
-import { Github, Linkedin, ExternalLink, MessageCircle, ArrowLeft } from 'lucide-react'
+import { Github, Linkedin, ExternalLink, ArrowLeft } from 'lucide-react'
 
 // Custom social media icons
 const DiscordIcon = () => (
@@ -25,11 +25,9 @@ const TelegramIcon = () => (
 );
 import { useUI } from '@/store/useUI'
 import { ProfileSwitch } from '../ui/ProfileSwitch'
-import { cn } from '@/lib/utils'
 
-const navItems = [
-  { href: '/bio', label: 'Biography', wip: true },
-]
+
+
 
 const socialLinks = [
   { href: 'https://github.com/josegomez-dev', icon: Github, label: 'GitHub' },
@@ -42,7 +40,7 @@ const socialLinks = [
 
 export function Navbar() {
   const pathname = usePathname()
-  const { currentProfile } = useUI()
+
 
   return (
         <motion.nav

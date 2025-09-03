@@ -41,8 +41,23 @@ interface InteractiveTreeMapProps {
   activeTab: 'overview' | 'projects' | 'competitions' | 'blog' | 'journey' | 'achievements' | 'interests' | 'timeline';
 }
 
+interface NodeData {
+  label: string;
+  description: string;
+  category: string;
+  level: number;
+  x: number;
+  y: number;
+  children?: string[];
+  links?: Array<{
+    label: string;
+    url: string;
+    type?: string;
+  }>;
+}
+
 // Custom Node Component
-const CustomNode = ({ data }: { data: any }) => {
+const CustomNode = ({ data }: { data: NodeData }) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
 
@@ -115,7 +130,7 @@ const CustomNode = ({ data }: { data: any }) => {
       {/* Links */}
       {data.links && data.links.length > 0 && (
         <div className="space-y-1">
-          {data.links.slice(0, 2).map((link: any, index: number) => (
+          {data.links.slice(0, 2).map((link, index: number) => (
             <motion.a
               key={index}
               href={link.url}
@@ -149,7 +164,7 @@ const CustomNode = ({ data }: { data: any }) => {
               {data.links && data.links.length > 0 && (
                 <div className="mt-2 pt-2 border-t border-white/20">
                   <div className="text-xs opacity-60 mb-1">Quick Links:</div>
-                  {data.links.map((link: any, index: number) => (
+                  {data.links.map((link, index: number) => (
                     <a
                       key={index}
                       href={link.url}

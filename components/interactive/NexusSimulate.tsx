@@ -10,7 +10,12 @@ interface SimulationState {
   description: string;
   status: 'idle' | 'running' | 'paused' | 'completed';
   progress: number;
-  results: any[];
+  results: Array<{
+    step: string;
+    description: string;
+    timestamp: Date;
+    status: 'success' | 'error' | 'info';
+  }>;
   timestamp: Date;
 }
 
@@ -481,7 +486,7 @@ export default function NexusSimulate({ isOpen, onClose }: NexusSimulateProps) {
 
                   {/* Continue Button */}
                   <div className="bg-white/5 border border-white/20 rounded-xl p-4">
-                    <h5 className="text-white font-semibold mb-3">🎯 What's Next?</h5>
+                    <h5 className="text-white font-semibold mb-3">🎯 What&apos;s Next?</h5>
                     <div className="space-y-3">
                       <motion.button
                         whileHover={{ scale: 1.02 }}

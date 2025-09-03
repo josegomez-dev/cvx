@@ -44,7 +44,10 @@ import DeveloperConsoleModal from '../modals/DeveloperConsoleModal';
 import NexusSimulateModal from '../modals/NexusSimulateModal';
 import AIChat from '../interactive/AIChat';
 
-interface InteractiveToolsSidebarProps {}
+interface InteractiveToolsSidebarProps {
+  // Add props if needed in the future
+  // eslint-disable-next-line @typescript-eslint/no-empty-object-type
+}
 
 interface ToolStats {
   id: string;

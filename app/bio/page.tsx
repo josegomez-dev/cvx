@@ -1,14 +1,13 @@
 'use client'
 
 import { useState } from 'react'
-import { motion } from 'framer-motion'
 import { Hero } from '@/components/layout/Hero'
 import { Section } from '@/components/ui/Section'
 import { Tabs } from '@/components/ui/Tabs'
 import { Badge } from '@/components/ui/Badge'
 import { CertifiedBadge } from '@/components/ui/CertifiedBadge'
 import InteractiveTreeMap from '@/components/interactive/InteractiveTreeMap'
-import { MapPin, Calendar, Award, Music, Code, Users, Globe, Heart, Star, BookOpen, Network } from 'lucide-react'
+import { MapPin, Calendar, Award, Music, Code, Users, Globe, Heart, Star, BookOpen } from 'lucide-react'
 
 export default function BioPage() {
   const [isTreeMapOpen, setIsTreeMapOpen] = useState(false);
@@ -27,7 +26,7 @@ export default function BioPage() {
     }
   }
 
-  const handleOpenTreeMap = (tab: 'journey' | 'achievements' | 'interests' | 'timeline') => {
+  const handleOpenTreeMap = () => {
     setActiveTreeTab('journey'); // Always use journey for bio page
     setIsTreeMapOpen(true);
   };

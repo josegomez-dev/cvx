@@ -11,15 +11,14 @@ import { Badge } from '@/components/ui/Badge'
 import { CertifiedBadge } from '@/components/ui/CertifiedBadge'
 import { projectsWeb2 } from '@/lib/data/projectsWeb2'
 import { projectsWeb3 } from '@/lib/data/projectsWeb3'
-import { aiToolkit } from '@/lib/data/aiToolkit'
-import { education } from '@/lib/data/education'
+
 import { HackathonCard } from '@/components/features/HackathonCard'
 import { hackathonAchievements } from '@/lib/data/hackathons'
 import { FeaturedArticles } from '@/components/features/FeaturedArticles'
 import { featuredArticles } from '@/lib/data/featuredArticles'
 import { EducationTimeline } from '@/components/features/EducationTimeline'
 import InteractiveTreeMap from '@/components/interactive/InteractiveTreeMap'
-import { FolderOpen, Network } from 'lucide-react'
+import { FolderOpen } from 'lucide-react'
 
 export default function TechPage() {
   const [isTreeMapOpen, setIsTreeMapOpen] = useState(false);
@@ -38,7 +37,7 @@ export default function TechPage() {
     }
   }
 
-  const handleOpenTreeMap = (tab: 'overview' | 'projects' | 'competitions' | 'blog') => {
+  const handleOpenTreeMap = () => {
     setActiveTreeTab('overview'); // Always use overview for tech page
     setIsTreeMapOpen(true);
   };

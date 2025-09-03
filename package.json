@@ -36,5 +36,9 @@
     "typescript": "^5.0.0",
     "zod": "^3.23.0",
     "zustand": "^4.0.0"
+  },
+  "devDependencies": {
+    "eslint": "8.57.1",
+    "eslint-config-next": "15.5.2"
   }
 }
