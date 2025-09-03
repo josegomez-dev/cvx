@@ -1,9 +1,7 @@
 'use client'
 
-import Link from 'next/link'
-import { usePathname } from 'next/navigation'
 import { motion } from 'framer-motion'
-import { Github, Linkedin, ExternalLink, MessageCircle } from 'lucide-react'
+import { Github, Linkedin, ExternalLink, Heart } from 'lucide-react'
 
 // Custom social media icons
 const DiscordIcon = () => (
@@ -23,13 +21,6 @@ const TelegramIcon = () => (
     <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12a12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
   </svg>
 );
-import { useUI } from '@/store/useUI'
-import { ProfileSwitch } from './ProfileSwitch'
-import { cn } from '@/lib/utils'
-
-const navItems = [
-  { href: '/bio', label: 'Biography', wip: true },
-]
 
 const socialLinks = [
   { href: 'https://github.com/josegomez-dev', icon: Github, label: 'GitHub' },
@@ -40,72 +31,34 @@ const socialLinks = [
   { href: 'https://t.me/josegomezdev', icon: TelegramIcon, label: 'Telegram' },
 ]
 
-export function Navbar() {
-  const pathname = usePathname()
-  const { currentProfile } = useUI()
-
+export function Footer() {
   return (
-        <motion.nav
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      className="sticky top-0 z-50 w-full border-b border-white/10 bg-base-surface/80 backdrop-blur-md"
-    >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex h-16 items-center justify-between">
-          {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              className="text-xl font-bold"
-            >
-              <img src="/media/avatar.jpg" alt="José Alejandro Gómez Castro" className="w-20 h-20 rounded-full profile-photo" />
-            </motion.div>
-          </Link>
+    <footer className="border-t border-white/10 bg-base-surface/50 backdrop-blur-sm">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="flex flex-col space-y-6">
+          {/* Main Content */}
+          <div className="flex flex-col lg:flex-row items-center justify-between space-y-4 lg:space-y-0">
+            {/* Bio */}
+            <div className="text-center lg:text-left">
+              <p className="text-white/60 text-sm font-medium">
+                Next-Gen Web3 Open Source Developer
+              </p>
+              <p className="text-white/40 text-xs mt-1">
+                Bridging technology and culture through innovation
+              </p>
+            </div>
 
-          {/* Navigation Links */}
-          {/* <div className="hidden md:flex items-center space-x-8">
-            {navItems.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className={cn(
-                  'relative px-3 py-2 text-sm font-medium transition-colors hover:text-primary',
-                  pathname === item.href ? 'text-primary' : 'text-white/70'
-                )}
-              >
-                <div className="flex items-center space-x-2">
-                  <span>{item.label}</span>
-                  {item.wip && (
-                    <span className="inline-flex items-center px-1.5 py-0.5 rounded-full text-xs font-medium bg-arts-primary/20 text-arts-primary border border-arts-primary/30">
-                      WIP
-                    </span>
-                  )}
-                </div>
-                {pathname === item.href && (
-                  <motion.div
-                    layoutId="navbar-indicator"
-                    className="absolute inset-0 rounded-md bg-primary/10 border border-primary/20"
-                    initial={false}
-                    transition={{ type: "spring", stiffness: 500, damping: 30 }}
-                  />
-                )}
-              </Link>
-            ))}
-          </div> */}
-
-          {/* Right Side */}
-          <div className="flex items-center space-x-4">
             {/* Social Links */}
-            <div className="hidden sm:flex items-center space-x-2">
+            <div className="flex items-center space-x-3">
               {socialLinks.map((link) => (
                 <motion.a
                   key={link.href}
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  whileHover={{ scale: 1.1 }}
+                  whileHover={{ scale: 1.1, y: -2 }}
                   whileTap={{ scale: 0.95 }}
-                  className="p-2 text-white/60 hover:text-primary transition-colors"
+                  className="p-2 text-white/40 hover:text-primary transition-all duration-200 rounded-lg hover:bg-white/5"
                   aria-label={link.label}
                 >
                   <link.icon className="h-4 w-4" />
@@ -113,13 +66,29 @@ export function Navbar() {
               ))}
             </div>
 
-            {/* Profile Switch */}
-            <ProfileSwitch />
+            {/* Copyright */}
+            <div className="flex items-center space-x-1 text-white/40 text-xs">
+              <span>Made with</span>
+              <motion.div
+                animate={{ scale: [1, 1.2, 1] }}
+                transition={{ duration: 1, repeat: Infinity }}
+              >
+                <Heart className="h-3 w-3 text-arts-primary" />
+              </motion.div>
+              <span>by José Alejandro Gómez Castro</span>
+            </div>
+          </div>
 
-
+          {/* Additional Info */}
+          <div className="flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-8 text-white/30 text-xs">
+            <span>© 2025 José Alejandro Gómez Castro</span>
+            <span>•</span>
+            <span>All rights reserved</span>
+            <span>•</span>
+            <span>Built with Next.js & TypeScript</span>
           </div>
         </div>
       </div>
-    </motion.nav>
+    </footer>
   )
 }

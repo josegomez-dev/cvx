@@ -18,6 +18,7 @@ export function CustomCursor({ children }: CustomCursorProps) {
   const pathname = usePathname()
   const isHomePage = pathname === '/'
   const isTechPage = pathname === '/tech'
+  const isBioPage = pathname === '/bio'
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -41,6 +42,12 @@ export function CustomCursor({ children }: CustomCursorProps) {
       } else if (target.closest('.tech-name') || target.closest('[data-cursor="tech-name"]')) {
         setIsHoveringName(true)
       } else if (target.closest('.tech-card-title') || target.closest('[data-cursor="tech-card-title"]')) {
+        setIsHovering(true)
+      } else if (target.closest('.bio-title') || target.closest('[data-cursor="bio-title"]')) {
+        setIsHoveringName(true)
+      } else if (target.closest('.bio-name') || target.closest('[data-cursor="bio-name"]')) {
+        setIsHoveringName(true)
+      } else if (target.closest('.bio-card-title') || target.closest('[data-cursor="bio-card-title"]')) {
         setIsHovering(true)
       } else if (target.closest('.wallet-button') || target.closest('[data-cursor="wallet"]')) {
         setIsHoveringWallet(true)
@@ -77,7 +84,7 @@ export function CustomCursor({ children }: CustomCursorProps) {
           x: mousePosition.x - 16,
           y: mousePosition.y - 16,
           scale: isHovering || isHoveringButton || isHoveringName || isHoveringPhoto || isHoveringWallet ? 1.5 : 1,
-          opacity: (isHomePage || isTechPage) && (isHovering || isHoveringButton || isHoveringName || isHoveringPhoto || isHoveringWallet) ? 1 : 0,
+          opacity: (isHomePage || isTechPage || isBioPage) && (isHovering || isHoveringButton || isHoveringName || isHoveringPhoto || isHoveringWallet) ? 1 : 0,
         }}
         transition={{
           type: "spring",
@@ -183,6 +190,17 @@ export function CustomCursor({ children }: CustomCursorProps) {
           .tech-title:hover *,
           .tech-name:hover *,
           .tech-card-title:hover *,
+          .ai-button:hover *,
+          .profile-photo:hover *,
+          .wallet-button:hover * {
+            cursor: none !important;
+          }
+        ` : ''}
+        
+        ${isBioPage ? `
+          .bio-title:hover *,
+          .bio-name:hover *,
+          .bio-card-title:hover *,
           .ai-button:hover *,
           .profile-photo:hover *,
           .wallet-button:hover * {

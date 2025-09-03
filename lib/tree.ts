@@ -28,10 +28,10 @@ export const treeNodes: TreeNode[] = [
     label: 'Software Engineer (Web2 → Web3)',
     description: '10+ years shipping web & mobile apps. React/Next.js/TS, Solidity & Cairo, Stellar SDK, Firebase; UX-first builder.',
     category: 'tech',
-    links: [
-      { label: 'View Tech Profile', url: '/tech', type: 'internal' },
-      { label: 'GitHub', url: 'https://github.com/josegomez-dev', type: 'external' },
-    ],
+          links: [
+        { label: 'View Tech Profile', url: '/tech', type: 'internal' },
+        { label: 'GitHub', url: process.env.NEXT_PUBLIC_GITHUB_URL || '#', type: 'external' },
+      ],
   },
   {
     id: 'arts',

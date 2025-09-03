@@ -94,3 +94,38 @@ export function TechDescriptionTypewriter() {
   )
 }
 
+// Specialized component for the bio description
+export function BioDescriptionTypewriter() {
+  return (
+    <div className="text-lg dark:text-white/60 light:text-gray-600 max-w-3xl mx-auto mb-8">
+      <TypewriterText 
+        text="A journey of "
+        speed={70}
+        className="dark:text-white/80 light:text-gray-700 font-medium"
+        cursorColor="text-accent"
+      />
+      <TypewriterText 
+        text="music, "
+        speed={70}
+        delay={1000}
+        className="text-red-400 font-semibold"
+        cursorColor="text-red-400"
+      />
+      <TypewriterText 
+        text="technology, "
+        speed={70}
+        delay={2000}
+        className="text-cyan-400 font-semibold"
+        cursorColor="text-cyan-400"
+      />
+      <TypewriterText 
+        text="and cultural innovation."
+        speed={70}
+        delay={3500}
+        className="dark:text-white/80 light:text-gray-700 font-medium"
+        cursorColor="text-accent"
+      />
+    </div>
+  )
+}
+

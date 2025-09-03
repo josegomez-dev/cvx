@@ -45,7 +45,7 @@ export const projectsWeb3: Web3Project[] = [
   {
     title: 'Goatopia',
     chain: 'Telegram Mini-game App',
-    summary: 'Music NFTs, beat machines, cultural preservation & gamified launchpad.',
+    summary: 'A Telegram-based tap mini game where the main character is a goat. Players interact by tapping the goat (like Hamster Kombat) to earn in-game points, which can be boosted with special items, upgrades, or streak multipliers.',
     links: [
       { label: 'Telegram Bot', url: 'https://t.me/Goatopia_Bot'},
       { label: 'Development Company', url: 'https://lightningworks.io/' },

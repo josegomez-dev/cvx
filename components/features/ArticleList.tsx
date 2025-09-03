@@ -57,7 +57,7 @@ export function ArticleList({ categories }: ArticleListProps) {
           Check out my Medium profile for the latest content.
         </p>
         <a
-          href="https://medium.com/@alegomez"
+          href={process.env.NEXT_PUBLIC_MEDIUM_URL || '#'}
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center space-x-2 text-primary hover:text-primary/80 transition-colors mt-4"
@@ -74,7 +74,7 @@ export function ArticleList({ categories }: ArticleListProps) {
       <div className="text-center py-8">
         <p className="dark:text-white/60 light:text-gray-600">No articles found for the selected categories.</p>
         <a
-          href="https://medium.com/@alegomez"
+          href={process.env.NEXT_PUBLIC_MEDIUM_URL || '#'}
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center space-x-2 text-primary hover:text-primary/80 transition-colors mt-4"

@@ -1,32 +1,47 @@
 'use client'
 
+import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { Hero } from '@/components/Hero'
-import { Section } from '@/components/Section'
-import { Tabs } from '@/components/Tabs'
-import { ProjectCard } from '@/components/ProjectCard'
-import { ArticleList } from '@/components/ArticleList'
-import { Badge } from '@/components/Badge'
-import { CertifiedBadge } from '@/components/CertifiedBadge'
+import { Hero } from '@/components/layout/Hero'
+import { Section } from '@/components/ui/Section'
+import { Tabs } from '@/components/ui/Tabs'
+import { ProjectCard } from '@/components/features/ProjectCard'
+import { ArticleList } from '@/components/features/ArticleList'
+import { Badge } from '@/components/ui/Badge'
+import { CertifiedBadge } from '@/components/ui/CertifiedBadge'
 import { projectsWeb2 } from '@/lib/data/projectsWeb2'
 import { projectsWeb3 } from '@/lib/data/projectsWeb3'
 import { aiToolkit } from '@/lib/data/aiToolkit'
 import { education } from '@/lib/data/education'
-import { HackathonCard } from '@/components/HackathonCard'
+import { HackathonCard } from '@/components/features/HackathonCard'
 import { hackathonAchievements } from '@/lib/data/hackathons'
-import { FeaturedArticles } from '@/components/FeaturedArticles'
+import { FeaturedArticles } from '@/components/features/FeaturedArticles'
 import { featuredArticles } from '@/lib/data/featuredArticles'
-import { EducationTimeline } from '@/components/EducationTimeline'
-import { FolderOpen } from 'lucide-react'
+import { EducationTimeline } from '@/components/features/EducationTimeline'
+import InteractiveTreeMap from '@/components/interactive/InteractiveTreeMap'
+import { FolderOpen, Network } from 'lucide-react'
 
 export default function TechPage() {
+  const [isTreeMapOpen, setIsTreeMapOpen] = useState(false);
+  const [activeTreeTab, setActiveTreeTab] = useState<'overview' | 'projects' | 'competitions' | 'blog'>('overview');
+
   const heroData = {
     profile: 'tech' as const,
     title: 'Howdy, I\'m',
     subtitle: "José Alejandro Gómez Castro",
     subtitle2: "Next-Gen Web3 Open Source Developer",
-    description: '10+ years shipping desktop &web & mobile apps. UX-first builder.'
+    description: '10+ years shipping desktop &web & mobile apps. UX-first builder.',
+    showTreeMapButton: true,
+    onTreeMapClick: () => {
+      setActiveTreeTab('overview');
+      setIsTreeMapOpen(true);
+    }
   }
+
+  const handleOpenTreeMap = (tab: 'overview' | 'projects' | 'competitions' | 'blog') => {
+    setActiveTreeTab('overview'); // Always use overview for tech page
+    setIsTreeMapOpen(true);
+  };
 
   const tabs = [
     {
@@ -34,6 +49,7 @@ export default function TechPage() {
       label: 'Overview',
       content: (
         <div className="space-y-8">
+
 
           {/* Tech Stack Section */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -166,7 +182,7 @@ export default function TechPage() {
           <div className="card p-6">
                           <h3 className="text-xl font-bold text-primary mb-4 tech-card-title">Experience Highlights</h3>
             <ul className="space-y-3 dark:text-white/80 light:text-gray-700">
-              <li>• <motion.a href="https://github.com/josegomez-dev" target="_blank" rel="noopener noreferrer" className="inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-lg bg-primary/10 text-primary hover:bg-primary/20 transition-all duration-200 text-sm font-medium cursor-pointer border border-primary/20 hover:border-primary/40"
+                              <li>• <motion.a href={process.env.NEXT_PUBLIC_GITHUB_URL || '#'} target="_blank" rel="noopener noreferrer" className="inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-lg bg-primary/10 text-primary hover:bg-primary/20 transition-all duration-200 text-sm font-medium cursor-pointer border border-primary/20 hover:border-primary/40"
                   whileHover={{ scale: 1.02, y: -1 }}
                   whileTap={{ scale: 0.98 }}
                   animate={{ 
@@ -181,8 +197,8 @@ export default function TechPage() {
                     repeat: Infinity,
                     ease: "easeInOut"
                   }}>📝 Web2 foundations to Web3 pioneer</motion.a> transformation</li>
-              <li>• <motion.a 
-                  href="https://www.repretel.com/noticia/en-grecia-vive-un-joven-muy-talentoso-que-educa-con-musica-y-tecnologia/#!/player-visor" 
+                              <li>• <motion.a 
+                  href={process.env.NEXT_PUBLIC_REPRETEL_ARTICLE || '#'} 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-lg bg-primary/10 text-primary hover:bg-primary/20 transition-all duration-200 text-sm font-medium cursor-pointer border border-primary/20 hover:border-primary/40"
@@ -202,7 +218,7 @@ export default function TechPage() {
                   }}
                 >📺 Most recent personal interview</motion.a> on national television</li>
               <li>• <motion.a 
-                  href="https://github.com/josegomez-dev" 
+                  href={process.env.NEXT_PUBLIC_GITHUB_URL} 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-lg bg-secondary/10 text-secondary hover:bg-secondary/20 transition-all duration-200 text-sm font-medium cursor-pointer border border-secondary/20 hover:border-secondary/40"
@@ -222,7 +238,7 @@ export default function TechPage() {
                   }}
                 >💻 Open source contributor</motion.a> and community builder</li>
               <li>• <motion.a 
-                  href="https://speedrunethereum.com/builders/0x9391A141b5409d7c14DbAbd0F9FE3B92C331387e" 
+                  href={process.env.NEXT_PUBLIC_ETHEREUM_BUILDER_URL || '#'} 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-lg bg-accent/10 text-accent hover:bg-accent/20 transition-all duration-200 text-sm font-medium cursor-pointer border border-accent/20 hover:border-accent/40"
@@ -314,14 +330,14 @@ export default function TechPage() {
                 title="Musical Path"
                 description="Our first game, “Musical Path,” introduces musical grades, allowing users to learn and explore the essential foundations of music in an interactive, family-friendly way."
                 tags={['Unity', 'C#', '2D Platformer', 'Game Development']}
-                links={[
-                  { label: 'Product Demo', url: 'https://josegomez-dev.github.io/catarsismusical/games/musical-path.html' },
-                  { label: 'Play Now', url: 'https://josegomez-dev.github.io/MusicalPath/' },
-                  { label: 'Demo', url: 'https://www.youtube.com/watch?v=a2musNj58J0' },
-                  { label: 'Board Game', url: 'https://www.patreon.com/c/josegomez' },
-                  { label: 'Store', url: 'https://catarsismusical.bigcartel.com/' },
-                ]}
-                company="Personal Project"
+                                  links={[
+                    { label: 'Product Demo', url: process.env.NEXT_PUBLIC_MUSICAL_PATH_GAME || '#' },
+                    { label: 'Play Now', url: process.env.NEXT_PUBLIC_MUSICAL_PATH_URL || '#' },
+                    { label: 'Demo', url: process.env.NEXT_PUBLIC_MUSICAL_PATH_VIDEO || '#' },
+                    { label: 'Board Game', url: process.env.NEXT_PUBLIC_CATARSIS_PATREON || '#' },
+                    { label: 'Store', url: process.env.NEXT_PUBLIC_CATARSIS_STORE || '#' },
+                  ]}
+                company="Non-Profit"
                 role="Product Owner & Game Creator"
                 year={2024}
                 variant="personal"
@@ -330,27 +346,27 @@ export default function TechPage() {
                 title="Festivartes"
                 description="Festivartes is a Costa Rican platform that brings together art, education, and safe technology to help children, youth, and artists unlock their full creative potential. We believe in a future where culture is a driving force for innovation, well-being, and social transformation"
                 tags={['Web App', 'Arts & Culture', 'Ratings & Awards', 'React TS/Next.js', 'Firebase']}
-                links={[
-                  { label: 'Live App', url: 'https://josegomez-dev.github.io/festivartes/' },
-                  { label: 'Telegram Bot', url: 'https://t.me/festivartes_bot/festivartes' },
-                  { label: 'Docs', url: 'https://joses-organization-73.gitbook.io/festivartes/' },
-                  { label: 'GitHub', url: 'https://github.com/josegomez-dev/festivartes' },
-                ]}
-                company="Personal Project"
+                                  links={[
+                    { label: 'Live App', url: process.env.NEXT_PUBLIC_FESTIVARTES_URL || '#' },
+                    { label: 'Telegram Bot', url: process.env.NEXT_PUBLIC_FESTIVARTES_BOT || '#' },
+                    { label: 'Docs', url: process.env.NEXT_PUBLIC_FESTIVARTES_DOCS || '#' },
+                    { label: 'GitHub', url: process.env.NEXT_PUBLIC_FESTIVARTES_GITHUB || '#' },
+                  ]}
+                company="Non-Profit"
                 role="Product Owner & Developer"
                 year={2024}
                 variant="personal"
               />
               <ProjectCard
                 title="Catarsis Musical"
-                description="Telegram mini app platform with musical courses. Interactive learning experience for music education."
+                description="Telegram mini app platform with musical courses. Interactive learning experience for immersive education experience."
                 tags={['Telegram Mini App', 'VainillaJS','Music Education']}
-                links={[
-                  { label: 'Live App', url: 'https://t.me/catarsis_musical_bot' },
-                  { label: 'Telegram Mini App', url: 'https://t.me/CatarsisMusicalBot/Academia' },
-                  { label: 'Catarsis Musical', url: 'https://josegomez-dev.github.io/catarsismusical/' },
-                ]}
-                company="Personal Project"
+                                  links={[
+                    { label: 'Live App', url: process.env.NEXT_PUBLIC_CATARSIS_BOT || '#' },
+                    { label: 'Telegram Mini App', url: process.env.NEXT_PUBLIC_CATARSIS_ACADEMIA || '#' },
+                    { label: 'Catarsis Musical', url: process.env.NEXT_PUBLIC_CATARSIS_MUSICAL_URL || '#' },
+                  ]}
+                company="Non-Profit"
                 role="Product Owner & Developer"
                 variant="personal"
               />
@@ -364,6 +380,8 @@ export default function TechPage() {
       label: '🏆 Competitions',
       content: (
         <div className="space-y-8">
+
+
           <div className="text-center mb-8">
             <h3 className="text-2xl font-bold text-primary mb-4 tech-card-title">Competition Achievements</h3>
             <p className="dark:text-white/60 light:text-gray-600 max-w-2xl mx-auto">
@@ -388,6 +406,8 @@ export default function TechPage() {
       label: '📝 Blog',
       content: (
         <div className="space-y-12">
+
+
           <FeaturedArticles articles={featuredArticles} />
           <div>
             <h3 className="text-2xl font-bold text-primary mb-6 tech-card-title">All Articles</h3>
@@ -409,6 +429,13 @@ export default function TechPage() {
       <Section id="content" title="Tech Profile" description="Explore my software engineering journey">
         <Tabs tabs={tabs} defaultTab="overview" />
       </Section>
+      
+      {/* Interactive Tree Map */}
+      <InteractiveTreeMap 
+        isOpen={isTreeMapOpen}
+        onClose={() => setIsTreeMapOpen(false)}
+        activeTab={activeTreeTab}
+      />
     </div>
   )
 }

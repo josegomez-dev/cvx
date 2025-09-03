@@ -2,10 +2,10 @@
 
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Bot, MessageCircle, Terminal, X, Sparkles } from 'lucide-react';
+import { Bot, MessageCircle, Terminal, X, Sparkles, Zap } from 'lucide-react';
 
 interface AIChatButtonProps {
-  onOpenChat: (type: 'ai' | 'console') => void;
+  onOpenChat: (type: 'ai' | 'simulate') => void;
 }
 
 export default function AIChatButton({ onOpenChat }: AIChatButtonProps) {
@@ -19,10 +19,10 @@ export default function AIChatButton({ onOpenChat }: AIChatButtonProps) {
     "⚡ Quick business proposals & project ideas",
     "🎯 Get personalized development guidance",
     "🚀 Explore next-gen Web3 technologies",
-    "🔍 CVX Developer Console - navigate portfolio",
-    "✨ Magic AI button - try it now!",
+    "⚡ Nexus Simulate - interactive Web3 scenarios",
     "🎪 Interactive AI experience",
-    "🌟 Powered by open-source models"
+    "🌟 Powered by open-source models",
+    "🎮 Simulate Web3 startup launches & DeFi protocols"
   ];
 
   useEffect(() => {
@@ -87,17 +87,19 @@ export default function AIChatButton({ onOpenChat }: AIChatButtonProps) {
                 <span className="font-medium">Assistant</span>
               </motion.button>
               
+
+
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => {
-                  onOpenChat('console');
+                  onOpenChat('simulate');
                   setIsExpanded(false);
                 }}
-                className="flex items-center space-x-3 w-full px-4 py-3 bg-gradient-to-r from-green-500/20 to-emerald-500/20 hover:from-green-500/30 hover:to-emerald-500/30 border border-green-500/30 rounded-xl transition-all duration-200 text-white"
+                className="flex items-center space-x-3 w-full px-4 py-3 bg-gradient-to-r from-orange-500/20 to-red-500/20 hover:from-orange-500/30 hover:to-red-500/30 border border-orange-500/30 rounded-xl transition-all duration-200 text-white"
               >
-                <Terminal className="w-5 h-5 text-green-400" />
-                <span className="font-medium">Console</span>
+                <Zap className="w-5 h-5 text-orange-400" />
+                <span className="font-medium">Nexus Simulate</span>
               </motion.button>
             </div>
           </motion.div>

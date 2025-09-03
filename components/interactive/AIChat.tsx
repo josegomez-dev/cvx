@@ -42,7 +42,8 @@ export default function AIChat({ isOpen, onClose }: AIChatProps) {
       color: 'text-blue-400',
       description: 'Free open-source models',
       model: 'DialoGPT-medium',
-      available: true
+      available: true,
+      comingSoon: true
     },
     { 
       id: 'openai', 

@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Wallet, CreditCard, Coins, X, ChevronLeft, ChevronRight, ExternalLink, Copy, Check, ArrowRight } from 'lucide-react'
-import { WalletModal } from './WalletModal'
+import { WalletModal } from '../modals/WalletModal'
 import { WalletService, WalletConnection } from '@/lib/web3/walletService'
 
 interface WalletSidebarProps {

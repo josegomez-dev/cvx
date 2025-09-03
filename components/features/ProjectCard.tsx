@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { ExternalLink, Github, Play, Globe, FileText } from 'lucide-react'
-import { Badge } from './Badge'
+import { Badge } from '../ui/Badge'
 
 interface ProjectCardProps {
   title: string

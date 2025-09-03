@@ -1,32 +1,33 @@
 import type { Metadata } from 'next'
 import './globals.css'
-import { Navbar } from '@/components/Navbar'
-import { Footer } from '@/components/Footer'
-import AIChatManager from '@/components/AIChatManager'
-import { CustomCursor } from '@/components/CustomCursor'
-import { WalletSidebarManager } from '@/components/WalletSidebarManager'
+import { Navbar } from '@/components/layout/Navbar'
+import { Footer } from '@/components/layout/Footer'
+import AIChatManager from '@/components/interactive/AIChatManager'
+import { CustomCursor } from '@/components/animations/CustomCursor'
+import { WalletSidebarManager } from '@/components/sidebar/WalletSidebarManager'
+import InteractiveToolsSidebar from '@/components/sidebar/InteractiveToolsSidebar'
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'),
-  title: 'José Alejandro Gómez Castro | Next-Gen Web3 Open Source Developer',
-  description: 'Next-Gen Web3 Open Source Developer',
-  keywords: ['Web3', 'Developer', 'Blockchain', 'Open Source'],
+  title: 'CVx | Home Page',
+  description: 'CVx - Interactive Digital Portfolio & Web3 Developer Console',
+  keywords: ['CVx', 'Web3', 'Developer', 'Blockchain', 'Portfolio', 'Interactive'],
   authors: [{ name: 'José Alejandro Gómez Castro' }],
   icons: {
-    icon: '/media/favicon.ico',
-    shortcut: '/media/favicon.ico',
-    apple: '/media/favicon.ico',
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+    apple: '/favicon.ico',
   },
   openGraph: {
-    title: 'José Alejandro Gómez Castro | Next-Gen Web3 Open Source Developer',
-    description: 'Next-Gen Web3 Open Source Developer',
+    title: 'CVx | Home Page',
+    description: 'CVx - Interactive Digital Portfolio & Web3 Developer Console',
     type: 'website',
     images: ['/og.png'],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'José Alejandro Gómez Castro | Next-Gen Web3 Open Source Developer',
-    description: 'Next-Gen Web3 Open Source Developer',
+    title: 'CVx | Home Page',
+    description: 'CVx - Interactive Digital Portfolio & Web3 Developer Console',
     images: ['/og.png'],
   },
 }
@@ -47,6 +48,7 @@ export default function RootLayout({
                             <Footer />
                   <AIChatManager />
                   <WalletSidebarManager />
+                  <InteractiveToolsSidebar />
         </CustomCursor>
       </body>
     </html>

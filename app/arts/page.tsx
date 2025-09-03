@@ -1,6 +1,6 @@
 'use client'
 
-import { WIPBadge } from '@/components/WIPBadge'
+import { WIPBadge } from '@/components/ui/WIPBadge'
 
 export default function ArtsPage() {
   return (

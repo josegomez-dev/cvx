@@ -3,10 +3,10 @@
 import { motion } from 'framer-motion'
 import { Code, Music, ArrowRight, Map } from 'lucide-react'
 import Link from 'next/link'
-import { CertifiedBadge } from '@/components/CertifiedBadge'
-import { RotatingPhrases } from '@/components/RotatingPhrases'
-import { TypewriterSubtitle } from '@/components/TypewriterSubtitle'
-import { TiltCard } from '@/components/TiltCard'
+import { CertifiedBadge } from '@/components/ui/CertifiedBadge'
+import { RotatingPhrases } from '@/components/animations/RotatingPhrases'
+import { TypewriterSubtitle } from '@/components/animations/TypewriterSubtitle'
+import { TiltCard } from '@/components/ui/TiltCard'
 
 export default function HomePage() {
   return (
@@ -40,19 +40,11 @@ export default function HomePage() {
         <div className="relative inline-block">
           <Link 
             href="/bio"
-            className="inline-flex items-center space-x-2 px-6 py-3 rounded-xl bg-white/10 hover:bg-white/20 border border-white/20 text-white font-medium transition-all group blur-sm"
+            className="inline-flex items-center space-x-2 px-6 py-3 rounded-xl bg-white/10 hover:bg-white/20 border border-white/20 text-white font-medium transition-all group"
           >
             <Map className="h-5 w-5 group-hover:scale-110 transition-transform" />
             <span>Explore the Interactive Biography Map</span>
           </Link>
-          
-          {/* WIP Badge */}
-          <div className="absolute -top-3 -right-3 z-10">
-            <div className="inline-flex items-center space-x-1.5 px-2.5 py-1 rounded-full bg-red-500/20 text-red-400 border border-red-500/30 text-xs font-medium">
-              <span>🚧</span>
-              <span>WIP</span>
-            </div>
-          </div>
         </div>
       </motion.div>
 
@@ -66,7 +58,7 @@ export default function HomePage() {
         >
           <TiltCard
             type="tech"
-            title="CVX | Web3 Software Engineer 👨🏻‍💻"
+            title="CVx | Web3 Software Engineer 👨🏻‍💻"
             description="I'm an innovative Software Engineer, with more than 10 years of experience in the full software development life-cycle. Excellent troubleshooting and great teamwork skills."
             icon={Code}
             badges={[

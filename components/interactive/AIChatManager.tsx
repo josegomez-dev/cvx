@@ -3,17 +3,17 @@
 import { useState } from 'react';
 import AIChatButton from './AIChatButton';
 import AIChat from './AIChat';
-import DeveloperConsole from './DeveloperConsole';
+import NexusSimulateModal from '../modals/NexusSimulateModal';
 
 export default function AIChatManager() {
   const [isAIChatOpen, setIsAIChatOpen] = useState(false);
-  const [isConsoleOpen, setIsConsoleOpen] = useState(false);
+  const [isSimulateOpen, setIsSimulateOpen] = useState(false);
 
-  const handleOpenChat = (type: 'ai' | 'console') => {
+  const handleOpenChat = (type: 'ai' | 'simulate') => {
     if (type === 'ai') {
       setIsAIChatOpen(true);
-    } else {
-      setIsConsoleOpen(true);
+    } else if (type === 'simulate') {
+      setIsSimulateOpen(true);
     }
   };
 
@@ -24,9 +24,9 @@ export default function AIChatManager() {
         isOpen={isAIChatOpen} 
         onClose={() => setIsAIChatOpen(false)} 
       />
-      <DeveloperConsole 
-        isOpen={isConsoleOpen} 
-        onClose={() => setIsConsoleOpen(false)} 
+      <NexusSimulateModal 
+        isOpen={isSimulateOpen} 
+        onClose={() => setIsSimulateOpen(false)} 
       />
     </>
   );
