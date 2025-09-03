@@ -6,6 +6,7 @@ import Link from 'next/link'
 import { CertifiedBadge } from '@/components/CertifiedBadge'
 import { RotatingPhrases } from '@/components/RotatingPhrases'
 import { TypewriterSubtitle } from '@/components/TypewriterSubtitle'
+import { TiltCard } from '@/components/TiltCard'
 
 export default function HomePage() {
   return (
@@ -62,31 +63,21 @@ export default function HomePage() {
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          whileHover={{ 
-            scale: 1.02,
-            rotateY: 5,
-            boxShadow: "0 25px 50px -12px rgba(0, 229, 255, 0.25)"
-          }}
-          className="card card-hover group"
         >
-          <Link href="/tech" className="block p-8 h-full">
-            <div className="flex items-center justify-between mb-6">
-              <Code className="h-12 w-12 text-primary group-hover:scale-110 transition-transform" />
-              <ArrowRight className="h-6 w-6 text-primary opacity-0 group-hover:opacity-100 transition-opacity" />
-            </div>
-            <h2 className="text-2xl font-bold text-primary mb-4">
-              Software Engineer 👨🏻‍💻
-            </h2>
-            <p className="text-white/70 mb-6">
-             I'm an innovative Software Engineer, with more than 10 years of experience in the full software development life-cycle. Excellent troubleshooting and great teamwork skills.
-            </p>
-            <div className="flex flex-wrap gap-2">
-              <CertifiedBadge variant="scrum" hasStar>Scrum Master</CertifiedBadge>
-              <CertifiedBadge variant="devops" hasStar>DevOps</CertifiedBadge>
-              <CertifiedBadge variant="dev" hasStar>Full-Stack</CertifiedBadge>
-              <CertifiedBadge variant="web3" hasStar>Web3</CertifiedBadge>
-            </div>
-          </Link>
+          <TiltCard
+            type="tech"
+            title="CVX | Web3 Software Engineer 👨🏻‍💻"
+            description="I'm an innovative Software Engineer, with more than 10 years of experience in the full software development life-cycle. Excellent troubleshooting and great teamwork skills."
+            icon={Code}
+            badges={[
+              { text: "Scrum Master", variant: "scrum", hasStar: true },
+              { text: "Full-Stack", variant: "dev", hasStar: true },
+              { text: "DevOps", variant: "devops", hasStar: true },
+              { text: "Web3", variant: "web3", hasStar: true }
+            ]}
+            href="/tech"
+            color="text-primary"
+          />
         </motion.div>
 
         {/* Arts Card */}
@@ -94,45 +85,21 @@ export default function HomePage() {
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          whileHover={{ 
-            scale: 1.02,
-            rotateY: -5,
-            boxShadow: "0 25px 50px -12px rgba(255, 68, 68, 0.25)"
-          }}
-          className="card card-hover group relative"
         >
-          {/* WIP Badge */}
-          <div className="absolute top-4 right-4 z-10">
-            <div className="inline-flex items-center space-x-1.5 px-2.5 py-1 rounded-full bg-red-500/20 text-red-400 border border-red-500/30 text-xs font-medium">
-              <span>🚧</span>
-              <span>WIP</span>
-            </div>
-          </div>
-          <Link href="/arts" className="block p-8 h-full">
-            <div className="flex items-center justify-between mb-6">
-              <Music className="h-12 w-12 text-arts-primary group-hover:scale-110 transition-transform" />
-              <ArrowRight className="h-6 w-6 text-arts-primary opacity-0 group-hover:opacity-100 transition-opacity" />
-            </div>
-            <h2 className="text-2xl font-bold text-arts-primary mb-4 blur-sm">
-              Musician (Songwriter/Producer) 🤠
-            </h2>
-            <p className="text-white/70 mb-6 blur-sm">
-              Composer • Producer • Songwriter. National awards in Costa Rica 
-              (2013, 2015, 2024). Original soundtracks + modern folkloric 
-              adaptations for cultural preservation.
-            </p>
-            <div className="flex flex-wrap gap-2 blur-sm">
-              <span className="px-3 py-1 bg-arts-primary/20 text-arts-primary text-sm rounded-full">
-                Composer
-              </span>
-              <span className="px-3 py-1 bg-arts-primary/20 text-arts-primary text-sm rounded-full">
-                Producer
-              </span>
-              <span className="px-3 py-1 bg-arts-primary/20 text-arts-primary text-sm rounded-full">
-                Cultural
-              </span>
-            </div>
-          </Link>
+          <TiltCard
+            type="arts"
+            title="Musician (Songwriter & Producer) 🤠"
+            description="Composer • Producer • Songwriter. National awards in Costa Rica (2013, 2015, 2024). Original game soundtracks + modern folkloric compositions for cultural preservation."
+            icon={Music}
+            badges={[
+              { text: "Composer" },
+              { text: "Producer" },
+              { text: "Cultural" }
+            ]}
+            href="/arts"
+            color="text-arts-primary"
+            isWIP={true}
+          />
         </motion.div>
       </div>
 

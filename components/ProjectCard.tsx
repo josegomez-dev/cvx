@@ -51,27 +51,69 @@ export function ProjectCard({
       {/* Company Badge */}
       {company && (
         <div className="absolute top-4 right-4">
-          <div className="inline-flex items-center px-2 py-1 rounded-full bg-primary/20 border border-primary/30 text-primary text-xs font-medium">
+          <motion.div 
+            className="inline-flex items-center px-2 py-1 rounded-full bg-primary/20 border border-primary/30 text-primary text-xs font-medium cursor-pointer"
+            whileHover={{ 
+              scale: 1.1,
+              y: -2,
+              rotateZ: 2,
+              boxShadow: "0 8px 20px -4px rgba(0, 229, 255, 0.3)"
+            }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ 
+              type: "spring", 
+              stiffness: 400, 
+              damping: 10 
+            }}
+          >
             {company}
-          </div>
+          </motion.div>
         </div>
       )}
       
       {/* Role Badge */}
       {role && (
         <div className="absolute bottom-4 right-4">
-          <div className="inline-flex items-center px-2 py-1 rounded-full bg-secondary/20 border border-secondary/30 text-secondary text-xs font-medium">
+          <motion.div 
+            className="inline-flex items-center px-2 py-1 rounded-full bg-secondary/20 border border-secondary/30 text-secondary text-xs font-medium cursor-pointer"
+            whileHover={{ 
+              scale: 1.1,
+              y: -2,
+              rotateZ: 2,
+              boxShadow: "0 8px 20px -4px rgba(155, 92, 255, 0.3)"
+            }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ 
+              type: "spring", 
+              stiffness: 400, 
+              damping: 10 
+            }}
+          >
             {role}
-          </div>
+          </motion.div>
         </div>
       )}
       
       {/* Year Badge */}
       {year && (
         <div className="absolute top-4 left-4">
-          <div className="inline-flex items-center px-2 py-1 rounded-full bg-white/10 border border-white/20 text-white/80 text-xs font-medium">
+          <motion.div 
+            className="inline-flex items-center px-2 py-1 rounded-full bg-white/10 border border-white/20 text-white/80 text-xs font-medium cursor-pointer"
+            whileHover={{ 
+              scale: 1.1,
+              y: -2,
+              rotateZ: 2,
+              boxShadow: "0 8px 20px -4px rgba(255, 255, 255, 0.2)"
+            }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ 
+              type: "spring", 
+              stiffness: 400, 
+              damping: 10 
+            }}
+          >
             {year}
-          </div>
+          </motion.div>
         </div>
       )}
       

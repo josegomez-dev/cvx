@@ -69,7 +69,7 @@ export const projectsWeb2: Web2Project[] = [
       { label: 'Development Company', url: 'https://www.foundationlab.co/' },
     ],
     company: 'FoundationLab LLC',
-    role: 'App Developer',
+    role: 'Senior Product Developer',
     year: 2023
   },
 ]

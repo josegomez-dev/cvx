@@ -38,10 +38,21 @@ export function Badge({
         baseClasses,
         variantClasses[variant],
         sizeClasses[size],
+        'cursor-pointer',
         className
       )}
-      whileHover={{ scale: 1.05 }}
+      whileHover={{ 
+        scale: 1.08,
+        y: -1,
+        rotateZ: 1,
+        boxShadow: "0 8px 20px -4px rgba(0, 0, 0, 0.25)"
+      }}
       whileTap={{ scale: 0.95 }}
+      transition={{ 
+        type: "spring", 
+        stiffness: 300, 
+        damping: 15 
+      }}
     >
       {children}
     </motion.span>

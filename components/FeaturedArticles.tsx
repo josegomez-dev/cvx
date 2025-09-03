@@ -62,16 +62,44 @@ export function FeaturedArticles({ articles }: FeaturedArticlesProps) {
             className="card p-6 border-l-4 border-l-accent/50 relative overflow-hidden group"
           >
             {/* Type Badge */}
-            <div className={`absolute top-4 right-4 inline-flex items-center space-x-1.5 px-2.5 py-1 rounded-full bg-gradient-to-r ${getTypeColor(article.type)} text-xs font-medium`}>
+            <motion.div 
+              className={`absolute top-4 right-4 inline-flex items-center space-x-1.5 px-2.5 py-1 rounded-full bg-gradient-to-r ${getTypeColor(article.type)} text-xs font-medium cursor-pointer`}
+              whileHover={{ 
+                scale: 1.1,
+                y: -2,
+                rotateZ: 2,
+                boxShadow: "0 8px 20px -4px rgba(0, 229, 255, 0.3)"
+              }}
+              whileTap={{ scale: 0.95 }}
+              transition={{ 
+                type: "spring", 
+                stiffness: 400, 
+                damping: 10 
+              }}
+            >
               {getTypeIcon(article.type)}
               <span className="capitalize">{article.type}</span>
-            </div>
+            </motion.div>
 
             {/* Year Badge */}
             <div className="absolute top-4 left-4">
-              <div className="inline-flex items-center px-2 py-1 rounded-full bg-white/10 border border-white/20 text-white/80 text-xs font-medium">
+              <motion.div 
+                className="inline-flex items-center px-2 py-1 rounded-full bg-white/10 border border-white/20 text-white/80 text-xs font-medium cursor-pointer"
+                whileHover={{ 
+                  scale: 1.1,
+                  y: -2,
+                  rotateZ: 2,
+                  boxShadow: "0 8px 20px -4px rgba(255, 255, 255, 0.2)"
+                }}
+                whileTap={{ scale: 0.95 }}
+                transition={{ 
+                  type: "spring", 
+                  stiffness: 400, 
+                  damping: 10 
+                }}
+              >
                 {article.year}
-              </div>
+              </motion.div>
             </div>
 
             {/* Content */}

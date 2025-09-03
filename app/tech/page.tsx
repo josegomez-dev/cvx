@@ -90,6 +90,7 @@ export default function TechPage() {
                     <CertifiedBadge variant="ai">ChatGPT5</CertifiedBadge>
                     <CertifiedBadge variant="ai">Cursor</CertifiedBadge>
                     <CertifiedBadge variant="ai">Grok3</CertifiedBadge>
+                    <CertifiedBadge variant="ai">DeepSeek</CertifiedBadge>
                   </div>
                 </div>
                 <div>
@@ -139,6 +140,7 @@ export default function TechPage() {
                     <span className="ml-2 text-xs dark:text-white/60 light:text-gray-600">(Git/Project Management)</span>
                   </h4>
                 <div className="flex flex-wrap gap-2">
+                  <CertifiedBadge variant="collab">GitHub</CertifiedBadge>
                   <CertifiedBadge variant="collab">SourceTree</CertifiedBadge>
                   <CertifiedBadge variant="collab">Bitbucket</CertifiedBadge>
                   <CertifiedBadge variant="collab">Trello</CertifiedBadge>
@@ -338,7 +340,7 @@ export default function TechPage() {
                   { label: 'Store', url: 'https://catarsismusical.bigcartel.com/' },
                 ]}
                 company="Personal Project"
-                role="Game Creator"
+                role="Product Owner & Game Creator"
                 year={2024}
                 variant="personal"
               />
@@ -353,7 +355,7 @@ export default function TechPage() {
                   { label: 'GitHub', url: 'https://github.com/josegomez-dev/festivartes' },
                 ]}
                 company="Personal Project"
-                role="Product Creator & Developer"
+                role="Product Owner & Developer"
                 year={2024}
                 variant="personal"
               />
@@ -367,7 +369,7 @@ export default function TechPage() {
                   { label: 'Catarsis Musical', url: 'https://josegomez-dev.github.io/catarsismusical/' },
                 ]}
                 company="Personal Project"
-                role="Product Creator & Developer"
+                role="Product Owner & Developer"
                 variant="personal"
               />
             </div>

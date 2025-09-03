@@ -25,6 +25,7 @@ export const projectsWeb3: Web3Project[] = [
     ],
     year: 2025,
     company: 'Trusless Work',
+    role: 'Product Owner & Developer',
   },
   {
     title: 'BlockBeats 3.0',
@@ -39,6 +40,7 @@ export const projectsWeb3: Web3Project[] = [
     ],
     year: 2025,
     company: 'Starknet',
+    role: 'Product Owner & Developer',
   },
   {
     title: 'Goatopia',
@@ -50,5 +52,6 @@ export const projectsWeb3: Web3Project[] = [
     ],
     year: 2025,
     company: 'Lighting Works',
+    role: 'Web3 Frontend Developer',
   },
 ]

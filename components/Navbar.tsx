@@ -63,7 +63,7 @@ export function Navbar() {
           </Link>
 
           {/* Navigation Links */}
-          <div className="hidden md:flex items-center space-x-8">
+          {/* <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
               <Link
                 key={item.href}
@@ -91,7 +91,7 @@ export function Navbar() {
                 )}
               </Link>
             ))}
-          </div>
+          </div> */}
 
           {/* Right Side */}
           <div className="flex items-center space-x-4">

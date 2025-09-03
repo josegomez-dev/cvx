@@ -6,6 +6,11 @@ const parser = new Parser()
 
 export async function GET(request: NextRequest) {
   try {
+    // For build time, return empty response to avoid build issues
+    if (process.env.NODE_ENV === 'production' && !process.env.MEDIUM_RSS_URL) {
+      return NextResponse.json({ articles: [] })
+    }
+
     const { searchParams } = new URL(request.url)
     const category = searchParams.get('category')
     const rssUrl = process.env.MEDIUM_RSS_URL
