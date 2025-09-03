@@ -80,7 +80,7 @@ export function TiltCard({
           transformStyle: 'preserve-3d',
           perspective: 1200,
         }}
-        className="group relative overflow-hidden border-0 bg-white/5 backdrop-blur-sm shadow-lg shadow-black/20 rounded-2xl hover:border-0 hover:bg-transparent hover:backdrop-blur-none hover:shadow-none"
+        className="group relative overflow-hidden border-0 bg-white/5 backdrop-blur-sm shadow-lg shadow-black/20 rounded-2xl hover:border-0 hover:bg-transparent hover:backdrop-blur-none hover:shadow-none card"
         animate={{
           y: [0, -5, 0],
         }}

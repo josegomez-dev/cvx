@@ -3,6 +3,7 @@ import './globals.css'
 import { Navbar } from '@/components/Navbar'
 import { Footer } from '@/components/Footer'
 import AIChatManager from '@/components/AIChatManager'
+import { CustomCursor } from '@/components/CustomCursor'
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'),
@@ -37,12 +38,14 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       <body className="min-h-screen">
-        <Navbar />
-        <main className="min-h-screen">
-          {children}
-        </main>
-        <Footer />
-        <AIChatManager />
+        <CustomCursor>
+          <Navbar />
+          <main className="min-h-screen">
+            {children}
+          </main>
+          <Footer />
+          <AIChatManager />
+        </CustomCursor>
       </body>
     </html>
   )

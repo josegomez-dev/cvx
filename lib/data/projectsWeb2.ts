@@ -72,4 +72,16 @@ export const projectsWeb2: Web2Project[] = [
     role: 'Senior Product Developer',
     year: 2023
   },
+  {
+    title: 'Sagalab',
+    stack: ['React, Node.js, Sqlite'],
+    summary: 'Mixed-reality or immersive learning experiences—much like projects that use educational content for social-emotional learning and psychological education.',
+    links: [ 
+      { label: 'Live App', url: 'https://app.sagalab.info/login' },
+      { label: 'Manager Dashboard', url: 'https://manager.sagalab.info/login' },
+    ],
+    company: 'FoundationLab LLC',
+    role: 'Senior Product Developer',
+    year: 2023
+  },
 ]

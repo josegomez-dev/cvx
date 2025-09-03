@@ -58,7 +58,7 @@ export function Navbar() {
               whileHover={{ scale: 1.05 }}
               className="text-xl font-bold"
             >
-              <img src="/media/avatar.jpg" alt="José Alejandro Gómez Castro" className="w-20 h-20 rounded-full" />
+              <img src="/media/avatar.jpg" alt="José Alejandro Gómez Castro" className="w-20 h-20 rounded-full profile-photo" />
             </motion.div>
           </Link>
 

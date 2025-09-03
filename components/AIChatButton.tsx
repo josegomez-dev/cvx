@@ -111,7 +111,7 @@ export default function AIChatButton({ onOpenChat }: AIChatButtonProps) {
         onClick={toggleExpanded}
         onMouseEnter={() => setShowTooltip(true)}
         onMouseLeave={() => setShowTooltip(false)}
-        className="relative w-14 h-14 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 rounded-full shadow-2xl border-2 border-white/20 flex items-center justify-center transition-all duration-300"
+        className="relative w-14 h-14 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 rounded-full shadow-2xl border-2 border-white/20 flex items-center justify-center transition-all duration-300 ai-button"
         animate={{
           boxShadow: [
             "0 0 0 rgba(147, 51, 234, 0)",

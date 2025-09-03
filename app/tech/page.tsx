@@ -38,7 +38,7 @@ export default function TechPage() {
           {/* Tech Stack Section */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             <div className="card p-6">
-              <h3 className="text-xl font-bold text-primary mb-4">Core Technologies</h3>
+              <h3 className="text-xl font-bold text-primary mb-4 tech-card-title">Core Technologies</h3>
               <div className="space-y-4">
                 <div>
                   <h4 className="font-semibold dark:text-white light:text-gray-900 mb-2 flex items-center">
@@ -78,7 +78,7 @@ export default function TechPage() {
             </div>
             
             <div className="card p-6">
-              <h3 className="text-xl font-bold text-primary mb-4">Tools & Platforms</h3>
+              <h3 className="text-xl font-bold text-primary mb-4 tech-card-title">Tools & Platforms</h3>
               <div className="space-y-4">
                 <div>
                   <h4 className="font-semibold dark:text-white light:text-gray-900 mb-2 flex items-center">
@@ -118,7 +118,7 @@ export default function TechPage() {
             </div>            
 
             <div className="card p-6">
-            <h3 className="text-xl font-bold text-primary mb-4">Development Tools & Methodologies</h3>
+            <h3 className="text-xl font-bold text-primary mb-4 tech-card-title">Development Tools & Methodologies</h3>
             <div className="space-y-4">
               <div>
                                   <h4 className="font-semibold dark:text-white light:text-gray-900 mb-2 flex items-center">
@@ -164,9 +164,9 @@ export default function TechPage() {
 
           {/* Experience Highlights */}
           <div className="card p-6">
-            <h3 className="text-xl font-bold text-primary mb-4">Experience Highlights</h3>
+                          <h3 className="text-xl font-bold text-primary mb-4 tech-card-title">Experience Highlights</h3>
             <ul className="space-y-3 dark:text-white/80 light:text-gray-700">
-                             <li>• 10+ years shipping web & mobile apps&nbsp;
+                             <li>• 10+ years shipping web & mobile apps |&nbsp;
                  <motion.a href="https://www.youtube.com/watch?v=cGD6dkGVgEA&t=174s" target="_blank" rel="noopener noreferrer" className="inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-lg bg-green-500/10 text-green-400 hover:bg-green-500/20 transition-all duration-200 text-sm font-medium cursor-pointer border border-green-500/20 hover:border-green-500/40"
                    whileHover={{ scale: 1.02, y: -1 }}
                    whileTap={{ scale: 0.98 }}
@@ -181,7 +181,7 @@ export default function TechPage() {
                      duration: 3,
                      repeat: Infinity,
                      ease: "easeInOut"
-                   }}> 🍼 First experience</motion.a>
+                   }}>🍼 First App experience</motion.a>
                </li>
               <li>• <motion.a href="https://github.com/josegomez-dev" target="_blank" rel="noopener noreferrer" className="inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-lg bg-primary/10 text-primary hover:bg-primary/20 transition-all duration-200 text-sm font-medium cursor-pointer border border-primary/20 hover:border-primary/40"
                   whileHover={{ scale: 1.02, y: -1 }}
@@ -218,7 +218,6 @@ export default function TechPage() {
                     ease: "easeInOut"
                   }}
                 >📺 Most recent personal interview</motion.a> on national television</li>
-              <li>• UX-first builder with focus on user experience</li>
               <li>• <motion.a 
                   href="https://github.com/josegomez-dev" 
                   target="_blank" 
@@ -273,7 +272,7 @@ export default function TechPage() {
       content: (
         <div className="space-y-12">
           <div>
-            <h3 className="text-2xl font-bold text-secondary mb-6 flex items-center">
+            <h3 className="text-2xl font-bold text-secondary mb-6 flex items-center tech-card-title">
               <FolderOpen className="h-6 w-6 mr-3" />
               Most Recent Web3 Projects
             </h3>
@@ -298,7 +297,7 @@ export default function TechPage() {
             </div>
           </div>
           <div>
-            <h3 className="text-2xl font-bold text-primary mb-6 flex items-center">
+            <h3 className="text-2xl font-bold text-primary mb-6 flex items-center tech-card-title">
               <FolderOpen className="h-6 w-6 mr-3" />
               Web2 Projects
             </h3>
@@ -323,7 +322,7 @@ export default function TechPage() {
             </div>
           </div>
           <div>
-            <h3 className="text-2xl font-bold text-red-500 mb-6 flex items-center">
+            <h3 className="text-2xl font-bold text-red-500 mb-6 flex items-center tech-card-title">
               <FolderOpen className="h-6 w-6 mr-3" />
               Personal Projects
             </h3>
@@ -383,7 +382,7 @@ export default function TechPage() {
       content: (
         <div className="space-y-8">
           <div className="text-center mb-8">
-            <h3 className="text-2xl font-bold text-primary mb-4">Competition Achievements</h3>
+            <h3 className="text-2xl font-bold text-primary mb-4 tech-card-title">Competition Achievements</h3>
             <p className="dark:text-white/60 light:text-gray-600 max-w-2xl mx-auto">
               From biomedical devices to blockchain innovations, explore my journey through various hackathons, 
               challenges, and competitions that showcase rapid prototyping and problem-solving skills.
@@ -408,7 +407,7 @@ export default function TechPage() {
         <div className="space-y-12">
           <FeaturedArticles articles={featuredArticles} />
           <div>
-            <h3 className="text-2xl font-bold text-primary mb-6">All Articles</h3>
+            <h3 className="text-2xl font-bold text-primary mb-6 tech-card-title">All Articles</h3>
             <ArticleList categories={['software', 'web3']} />
           </div>
         </div>

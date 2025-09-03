@@ -37,10 +37,10 @@ export function Hero({
           transition={{ duration: 0.8 }}
           className="text-center mb-12"
         >
-          <h1 className={`text-4xl sm:text-6xl font-bold text-${accentColor} mb-4`}>
+          <h1 className={`text-4xl sm:text-6xl font-bold text-${accentColor} mb-4 tech-title`}>
             {title}
           </h1>
-          <p className="text-xl lg:text-4xl text-white/80 mb-2">
+          <p className="text-xl lg:text-4xl text-white/80 mb-2 tech-name">
             {subtitle}
           </p>
           
