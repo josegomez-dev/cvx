@@ -14,31 +14,38 @@ export interface Web2Project {
 
 export const projectsWeb2: Web2Project[] = [
   {
-    title: 'AccionSR',
-    stack: ['IONIC', 'Hybrid', 'iOS'],
-    summary: 'Cross-platform mobile solution for social responsibility initiatives. This experience introduced me to hybrid app development, mobile UI/UX design, and deploying apps for Apple devices.',
-    links: [
-      { label: 'Non-profit organization', url: 'https://www.instagram.com/accionsr/' },
-      { label: 'Press Release', url: 'https://www.linkedin.com/in/josealejandrogomezcastro/details/experience/' },
-      { label: 'Radio Nacional STAR', url: 'https://www.youtube.com/watch?v=cGD6dkGVgEA&pp=ygUXcmFkaW8gbmFjaW9uYWwgYWNjaW9uc3I%3D' },
-      { label: 'Radio Digital STAR', url: 'https://www.youtube.com/watch?v=a8sNCh2Q89E' },
+    title: 'Sagalab',
+    stack: ['React, Node.js, Sqlite'],
+    summary: 'Mixed-reality or immersive learning experiences—much like projects that use educational content for social-emotional learning and psychological education.',
+    links: [ 
+      { label: 'Live App', url: 'https://app.sagalab.info/login' },
+      { label: 'Manager Dashboard', url: 'https://manager.sagalab.info/login' },
     ],
     company: 'YesDuet',
-    role: 'Co-Founder',
-    year: 2015
+    role: 'Senior Product Developer',
+    year: 2023
   },
   {
-    title: 'JobbleApp',
-    stack: ['Angular', 'MongoDB', 'Express', 'PubNub API'],
-    summary: 'A job marketplace mobile app that connects talent with opportunities based on geographical positioning. Features include subscription channels, group access, and an internal chat system to streamline communication between employers and candidates.',
-    links: [
-      { label: 'Product', url: 'https://app.jobble.com/' },
-      { label: 'Clients', url: 'https://jobble.com/' },
+    title: 'Join ClubGolf',
+    stack: ['React Native', 'Expo', 'Firebase'],
+    summary: 'A mobile app built with Expo, React Native, and Firebase that allows players to register golf course progress in real time, track live scores, and place friendly bets with others during ongoing games.',
+    links: [ 
       { label: 'Development Company', url: 'https://www.foundationlab.co/' },
     ],
     company: 'FoundationLab LLC',
-    role: 'Frontend Developer',
-    year: 2019
+    role: 'Senior Product Developer',
+    year: 2023
+  },
+  {
+    title: 'Fasken Baker McKenzie',
+    stack: ['MERN', 'Stripe API', 'French translations'],
+    summary: 'An enterprise legal services platform built with React and Node.js. Designed to streamline the U.S. startup registration process, it integrates Stripe subscription payments and automatically generates legal documentation, providing a seamless end-to-end experience for entrepreneurs and legal teams.',
+    links: [ 
+      { label: 'Development Company', url: 'https://www.foundationlab.co/' },
+    ],
+    company: 'FoundationLab LLC',
+    role: 'Full-stack Developer',
+    year: 2022
   },
   {
     title: 'Gunderson',
@@ -54,37 +61,30 @@ export const projectsWeb2: Web2Project[] = [
     year: 2020
   },
   {
-    title: 'Fasken Baker McKenzie',
-    stack: ['MERN', 'Stripe API', 'French translations'],
-    summary: 'An enterprise legal services platform built with React and Node.js. Designed to streamline the U.S. startup registration process, it integrates Stripe subscription payments and automatically generates legal documentation, providing a seamless end-to-end experience for entrepreneurs and legal teams.',
-    links: [ 
+    title: 'JobbleApp',
+    stack: ['Angular', 'MongoDB', 'Express', 'PubNub API'],
+    summary: 'A job marketplace mobile app that connects talent with opportunities based on geographical positioning. Features include subscription channels, group access, and an internal chat system to streamline communication between employers and candidates.',
+    links: [
+      { label: 'Product', url: 'https://app.jobble.com/' },
+      { label: 'Clients', url: 'https://jobble.com/' },
       { label: 'Development Company', url: 'https://www.foundationlab.co/' },
     ],
     company: 'FoundationLab LLC',
-    role: 'Full-stack Developer',
-    year: 2022
+    role: 'Frontend Developer',
+    year: 2019
   },
   {
-    title: 'Join ClubGolf',
-    stack: ['React Native', 'Expo', 'Firebase'],
-    summary: 'A mobile app built with Expo, React Native, and Firebase that allows players to register golf course progress in real time, track live scores, and place friendly bets with others during ongoing games.',
-    links: [ 
-      { label: 'Development Company', url: 'https://www.foundationlab.co/' },
-    ],
-    company: 'FoundationLab LLC',
-    role: 'Senior Product Developer',
-    year: 2023
-  },
-  {
-    title: 'Sagalab',
-    stack: ['React, Node.js, Sqlite'],
-    summary: 'Mixed-reality or immersive learning experiences—much like projects that use educational content for social-emotional learning and psychological education.',
-    links: [ 
-      { label: 'Live App', url: 'https://app.sagalab.info/login' },
-      { label: 'Manager Dashboard', url: 'https://manager.sagalab.info/login' },
+    title: 'AccionSR',
+    stack: ['IONIC', 'Hybrid', 'iOS'],
+    summary: 'Cross-platform mobile solution for social responsibility initiatives. This experience introduced me to hybrid app development, mobile UI/UX design, and deploying apps for Apple devices.',
+    links: [
+      { label: 'Non-profit organization', url: 'https://www.instagram.com/accionsr/' },
+      { label: 'Press Release', url: 'https://www.linkedin.com/in/josealejandrogomezcastro/details/experience/' },
+      { label: 'Radio Nacional STAR', url: 'https://www.youtube.com/watch?v=cGD6dkGVgEA&pp=ygUXcmFkaW8gbmFjaW9uYWwgYWNjaW9uc3I%3D' },
+      { label: 'Radio Digital STAR', url: 'https://www.youtube.com/watch?v=a8sNCh2Q89E' },
     ],
     company: 'YesDuet',
-    role: 'Senior Product Developer',
-    year: 2023
+    role: 'Co-Founder',
+    year: 2015
   },
 ]
