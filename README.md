@@ -38,15 +38,14 @@ Senior Full-Stack Developer with 10+ years of experience building scalable web a
 - **Gunderson Fund Management** (2020): MERN stack platform for startup investment management with DocuSign API
 - **JobbleApp** (2019): Angular-based job marketplace with real-time chat functionality via PubNub API
 - **Join ClubGolf** (2023): React Native mobile app with Firebase backend for real-time golf scoring
-- **Sagalab** (2023): Mixed-reality learning platform with immersive educational experiences
 
 ### **Co-Founder & Developer** | YesDuet (2015-2019)
 - **AccionSR**: Cross-platform mobile solution for social responsibility initiatives using Ionic hybrid development
 - Led hybrid app development and iOS deployment strategies
-- Featured on Radio Nacional STAR and Radio Digital STAR
+- **Sagalab** (2023): Mixed-reality learning platform with immersive educational experiences
 
 ### **Web3 Developer** | Freelance (2022-Present)
-- **Stellar Nexus Experience** (2025): Trustless escrow system with milestone voting on Stellar blockchain
+- **Stellar Nexus Experience** (2025): The Web3 Early Adopters Program on Stellar blockchian.
 - **BlockBeats 3.0** (2025): Music NFTs and gamified launchpad on Starknet using Cairo smart contracts
 - **Goatopia** (2025): Telegram Mini-game App for Lightning Works with in-game tokenomics
 
@@ -69,7 +68,7 @@ Senior Full-Stack Developer with 10+ years of experience building scalable web a
 ### **Web3 & Blockchain**
 - **Smart Contracts**: Solidity, Cairo (Starknet), Ethereum development
 - **Blockchain Platforms**: Ethereum, Stellar, Starknet, Telegram Mini Apps
-- **Development Tools**: Hardhat, Ethers.js v6, Web3 libraries
+- **Development Tools**: Hardhat, Scaffold, Ethers.js, Web3 libraries
 - **DeFi Protocols**: Escrow systems, NFT development, DApp architecture
 - **Tokenomics**: Game mechanics, reward systems, economic modeling
 
@@ -112,11 +111,11 @@ Senior Full-Stack Developer with 10+ years of experience building scalable web a
 - **Impact**: Revolutionary music × Web3 crossover project
 - **Links**: [Live App](https://blockbeats-tau.vercel.app/) • [GitHub](https://github.com/josegomez-dev/blockbeats) • [Docs](https://joses-organization-73.gitbook.io/blockbeats-3.0)
 
-### **Stellar Nexus Experience** | Trustless Escrow System (2025)
+### **Stellar Nexus Experience** | The Web3 Early Adopters Program on Stellar blockchain (2025)
 - **Technology**: Stellar blockchain, React, TypeScript
 - **Features**: Escrow demos, milestone voting, transparent transactions
 - **Innovation**: Trustless transaction system with automated releases
-- **Links**: [Live App](https://stellar-nexus-experience.vercel.app/) • [GitHub](https://github.com/josegomez-dev/trustless-poc) • [Starter Kit](https://nexus-starter.vercel.app/)
+- **Links**: [Live App](https://stellar-nexus-experience.vercel.app/) • [GitHub](https://github.com/josegomez-dev/stellar-nexus-experience) • [Demo](https://www.youtube.com/watch?v=1wKEBt0LcUQ)
 
 ### **Fasken Baker McKenzie** | Enterprise Legal Platform (2022)
 - **Technology**: MERN stack, Stripe API, French translations
@@ -177,20 +176,6 @@ Senior Full-Stack Developer with 10+ years of experience building scalable web a
 - **Testing**: Unit testing, integration testing, quality assurance
 - **Version Control**: Git workflows, collaborative development
 - **Documentation**: Technical writing, API documentation, user guides
-
-## 📈 Business Impact
-
-### **Client Success**
-- **Fasken Baker McKenzie**: Streamlined legal process automation
-- **FoundationLab LLC**: Delivered 6 major client projects
-- **Starknet**: Won hackathon with innovative Web3 solution
-- **YesDuet**: Co-founded successful mobile app company
-
-### **Technical Achievements**
-- **Performance**: Sub-2-second page loads, 95+ Lighthouse scores
-- **Scalability**: Enterprise-level applications handling high traffic
-- **Innovation**: Web3 integration, blockchain development
-- **Quality**: Zero critical bugs in production deployments
 
 ## 🔮 Future Focus
 

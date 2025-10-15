@@ -162,9 +162,9 @@ Vision: Become a Web3 Founder and build innovative decentralized solutions`,
   - Custom cursor effects & animations
 
 • Stellar Nexus Experience
-  - Enterprise blockchain solutions
-  - Cross-chain interoperability
-  - Production-grade DeFi applications
+  - The Web3 Early Adopters Program
+  - Trustless escrow system with milestone voting on Stellar blockchain
+  - Live App on Stellar Testnet
 
 Web2 Projects:
 ==============
@@ -175,15 +175,15 @@ Web2 Projects:
 
     experience: () => `Work Experience:
 ==================
-• Senior Full-Stack Developer (Current)
+• Senior Full-Stack Developer
   - Web3 and blockchain development
   - React, TypeScript, Node.js
   - Smart contract development
 
 • Enterprise Blockchain Developer
-  - Stellar Nexus Experience
-  - Cross-chain solutions
-  - Production DeFi applications
+  - The Web3 Early Adopters Program
+  - Trustless escrow system with milestone voting on Stellar blockchain
+  - Live App on Stellar Testnet
 
 • Open Source Contributor
   - Active in Web3 communities
@@ -209,9 +209,10 @@ Blockchain:
 • Cross-chain interoperability
 
 DevOps:
-• Docker, AWS, Vercel
+• Github Actions, Vercel, Codeship
 • CI/CD, Git, GitHub
-• Testing frameworks`,
+• Testing frameworks, Cypress, Jest
+• Swagger Backend Documentation`,
 
     contact: () => `Contact Information:
 ====================

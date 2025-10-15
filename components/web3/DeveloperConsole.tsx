@@ -134,9 +134,7 @@ Background:
 • 10+ years in software development
 • Specialized in Web3, React, and modern web technologies
 • Winner of Starknet Hackathon 2025 (2nd Place) - BlockBeats 3.0
-• Enterprise experience with Stellar Nexus Experience
 • Published technical articles and guides
-• Active open source contributor
 
 Current Focus:
 • Web3 Development & Smart Contracts
@@ -151,7 +149,6 @@ Vision: Become a Web3 Founder and build innovative decentralized solutions`,
 ================
 • BlockBeats 3.0 - Starknet Hackathon Winner
   - Cairo smart contracts for music NFTs
-  - Trustless music streaming platform
   - 2nd Place in Starknet Hackathon 2025
   - Live on Starknet mainnet
 
@@ -159,12 +156,11 @@ Vision: Become a Web3 Founder and build innovative decentralized solutions`,
   - Interactive developer console
   - AI-powered assistant integration
   - Nexus Simulate Web3 scenarios
-  - Custom cursor effects & animations
 
 • Stellar Nexus Experience
-  - Enterprise blockchain solutions
-  - Cross-chain interoperability
-  - Production-grade DeFi applications
+  - The Web3 Early Adopters Program
+  - Trustless escrow system with milestone voting on Stellar blockchain
+  - Live App on Stellar Testnet
 
 Web2 Projects:
 ==============
@@ -175,15 +171,15 @@ Web2 Projects:
 
     experience: () => `Work Experience:
 ==================
-• Senior Full-Stack Developer (Current)
+• Senior Full-Stack Developer
   - Web3 and blockchain development
   - React, TypeScript, Node.js
   - Smart contract development
 
-• Enterprise Blockchain Developer
-  - Stellar Nexus Experience
-  - Cross-chain solutions
-  - Production DeFi applications
+• Stellar Nexus Experience
+  - The Web3 Early Adopters Program
+  - Trustless escrow system with milestone voting on Stellar blockchain
+  - Live App on Stellar Testnet
 
 • Open Source Contributor
   - Active in Web3 communities

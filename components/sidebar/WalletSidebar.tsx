@@ -253,43 +253,42 @@ export function WalletSidebar({ isOpen, onToggle }: WalletSidebarProps) {
   return (
     <>
       {/* Floating Toggle Button */}
-      <motion.button
-        onClick={onToggle}
-        className="fixed bottom-24 right-4 z-[99999] w-12 h-12 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full shadow-2xl border-2 border-white/20 flex items-center justify-center transition-all duration-300 hover:scale-110 wallet-button"
-
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
-        animate={{
-          boxShadow: [
-            "0 0 0 rgba(147, 51, 234, 0)",
-            "0 0 20px rgba(147, 51, 234, 0.3)",
-            "0 0 0 rgba(147, 51, 234, 0)"
-          ]
-        }}
-        transition={{
-          duration: 2,
-          repeat: Infinity,
-          ease: "easeInOut"
-        }}
-      >
-        <Wallet className="w-6 h-6 text-white" />
-        
-        {/* PENDING Badge */}
-        <motion.div
-          className="absolute -top-1 -right-1 bg-red-500 text-white text-xs px-1.5 py-0.5 rounded-full font-bold"
+      <div className="fixed bottom-24 right-4 z-[99999] blur-sm opacity-60">
+        <motion.button
+          className="relative w-12 h-12 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full shadow-2xl border-2 border-white/20 flex items-center justify-center transition-all duration-300 wallet-button cursor-not-allowed pointer-events-none"
           animate={{
-            scale: [1, 1.1, 1],
-            opacity: [0.8, 1, 0.8]
+            boxShadow: [
+              "0 0 0 rgba(147, 51, 234, 0)",
+              "0 0 20px rgba(147, 51, 234, 0.3)",
+              "0 0 0 rgba(147, 51, 234, 0)"
+            ]
           }}
           transition={{
             duration: 2,
             repeat: Infinity,
             ease: "easeInOut"
           }}
+          title="🚧 Work in Progress - Payment Gateway Coming Soon"
         >
-          PENDING
-        </motion.div>
-      </motion.button>
+          <Wallet className="w-6 h-6 text-white" />
+          
+          {/* WIP Badge */}
+          <motion.div
+            className="absolute -top-1 -right-1 bg-red-500 text-white text-xs px-1.5 py-0.5 rounded-full font-bold"
+            animate={{
+              scale: [1, 1.1, 1],
+              opacity: [0.8, 1, 0.8]
+            }}
+            transition={{
+              duration: 2,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
+          >
+            WIP
+          </motion.div>
+        </motion.button>
+      </div>
 
       {/* Sidebar Overlay */}
       <AnimatePresence>

@@ -353,7 +353,7 @@ export default function TechPage() {
                   ]}
                 company="Non-Profit"
                 role="Product Owner & Developer"
-                year={2024}
+                year={2025}
                 variant="personal"
               />
               <ProjectCard
@@ -368,6 +368,7 @@ export default function TechPage() {
                 company="Non-Profit"
                 role="Product Owner & Developer"
                 variant="personal"
+                year={2021}
               />
             </div>
           </div>

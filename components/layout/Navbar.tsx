@@ -43,7 +43,7 @@ export function Navbar() {
 
 
   return (
-        <motion.nav
+    <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       className="sticky top-0 z-50 w-full border-b border-white/10 bg-base-surface/80 backdrop-blur-md"

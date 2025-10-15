@@ -309,42 +309,56 @@ export default function InteractiveToolsSidebar({}: InteractiveToolsSidebarProps
               <div className="space-y-3">
                 <h4 className="text-white font-semibold text-sm">Interactive Tools & Stats</h4>
                 <div className="grid grid-cols-1 gap-3">
-                  {tools.map((tool) => (
-                    <motion.div
-                      key={tool.id}
-                      className={`bg-gradient-to-r ${tool.color} p-3 rounded-lg cursor-pointer group relative overflow-hidden`}
-                      whileHover={{ scale: 1.02 }}
-                      whileTap={{ scale: 0.98 }}
-                                             onClick={() => {
-                         if (tool.id === 'console') {
-                           openConsole();
-                         } else if (tool.id === 'nexus-simulate') {
-                           openNexus();
-                         } else if (tool.id === 'ai-assistant') {
-                           openAIChat();
-                         }
-                       }}
-                    >
-                      {/* Background Pattern */}
-                      <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors" />
-                      
-                      <div className="relative flex items-center justify-between">
-                        <div className="flex items-center space-x-3">
-                          <div className={`w-8 h-8 bg-white/20 rounded-full flex items-center justify-center ${getAnimationClass(tool.animation)}`}>
-                            {tool.icon}
+                  {tools.map((tool) => {
+                    const isConsole = tool.id === 'console';
+                    const isDisabled = !isConsole;
+                    
+                    return (
+                      <motion.div
+                        key={tool.id}
+                        className={`bg-gradient-to-r ${tool.color} p-3 rounded-lg ${isDisabled ? 'cursor-not-allowed opacity-70 blur-[1px]' : 'cursor-pointer'} group relative overflow-hidden`}
+                        whileHover={!isDisabled ? { scale: 1.02 } : {}}
+                        whileTap={!isDisabled ? { scale: 0.98 } : {}}
+                        onClick={() => {
+                          if (tool.id === 'console') {
+                            openConsole();
+                          } else if (tool.id === 'nexus-simulate') {
+                            openNexus();
+                          } else if (tool.id === 'ai-assistant') {
+                            openAIChat();
+                          }
+                        }}
+                      >
+                        {/* Background Pattern */}
+                        <div className={`absolute inset-0 ${isDisabled ? 'bg-black/40' : 'bg-black/20 group-hover:bg-black/10 transition-colors'}`} />
+                        
+                        {/* WIP Badge - only for disabled tools */}
+                        {isDisabled && (
+                          <div className="absolute top-2 right-2 z-10">
+                            <div className="px-2 py-1 bg-red-500 text-white text-xs rounded-full font-bold">
+                              WIP
+                            </div>
                           </div>
-                          <div>
-                            <div className="text-white font-semibold text-sm">{tool.name}</div>
-                            <div className="text-white/80 text-xs">{tool.description}</div>
+                        )}
+                        
+                        <div className="relative flex items-center justify-between">
+                          <div className="flex items-center space-x-3">
+                            <div className={`w-8 h-8 bg-white/20 rounded-full flex items-center justify-center ${!isDisabled && getAnimationClass(tool.animation)}`}>
+                              {tool.icon}
+                            </div>
+                            <div>
+                              <div className="text-white font-semibold text-sm">{tool.name}</div>
+                              <div className="text-white/80 text-xs">{tool.description}</div>
+                            </div>
+                          </div>
+                          <div className="text-right">
+                            <div className="text-white font-bold text-lg">{tool.value}</div>
+                            <div className="text-white/80 text-xs">{tool.unit}</div>
                           </div>
                         </div>
-                        <div className="text-right">
-                          <div className="text-white font-bold text-lg">{tool.value}</div>
-                          <div className="text-white/80 text-xs">{tool.unit}</div>
-                        </div>
-                      </div>
-                    </motion.div>
-                  ))}
+                      </motion.div>
+                    );
+                  })}
                 </div>
               </div>
 

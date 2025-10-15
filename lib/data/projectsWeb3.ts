@@ -16,7 +16,7 @@ export const projectsWeb3: Web3Project[] = [
   {
     title: 'Stellar Nexus Experience',
     chain: 'Stellar',
-    summary: 'Escrow demos & milestone voting system for transparent transactions.',
+    summary: 'The Web3 Early Adopters Program on Stellar blockchain.',
     links: [
       { label: 'Demo Video', url: 'https://www.youtube.com/watch?v=FuXQtLgDDBE'},
       { label: 'Live App', url: 'https://stellar-nexus-experience.vercel.app/' },

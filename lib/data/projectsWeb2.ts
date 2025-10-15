@@ -83,7 +83,7 @@ export const projectsWeb2: Web2Project[] = [
       { label: 'Live App', url: 'https://app.sagalab.info/login' },
       { label: 'Manager Dashboard', url: 'https://manager.sagalab.info/login' },
     ],
-    company: 'FoundationLab LLC',
+    company: 'YesDuet',
     role: 'Senior Product Developer',
     year: 2023
   },

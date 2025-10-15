@@ -215,33 +215,8 @@ export default function HomePage() {
 
           {/* Recent Interview Reference */}
           <div className="space-y-4">
-            <p className="text-white/70 text-lg">
-              Featured in national media for innovative work in technology and education!
-            </p>
             
             <div className="flex flex-wrap justify-center gap-4">
-              <motion.a 
-                href="https://www.repretel.com/noticia/en-grecia-vive-un-joven-muy-talentoso-que-educa-con-musica-y-tecnologia/#!/player-visor" 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="inline-flex items-center space-x-1.5 px-4 py-2 rounded-lg bg-primary/10 text-primary hover:bg-primary/20 transition-all duration-200 text-sm font-medium cursor-pointer border border-primary/20 hover:border-primary/40"
-                whileHover={{ scale: 1.02, y: -1 }}
-                whileTap={{ scale: 0.98 }}
-                animate={{ 
-                  boxShadow: [
-                    "0 0 0 rgba(0, 229, 255, 0)",
-                    "0 0 8px rgba(0, 229, 255, 0.2)",
-                    "0 0 0 rgba(0, 229, 255, 0)"
-                  ]
-                }}
-                transition={{ 
-                  duration: 3,
-                  repeat: Infinity,
-                  ease: "easeInOut"
-                }}
-              >
-                📺 Watch the Full Interview
-              </motion.a>
               
               <motion.a 
                 href="https://calendly.com/josegomez-dev/30min?month=2025-09" 

@@ -14,15 +14,9 @@ export default function AIChatButton({ onOpenChat }: AIChatButtonProps) {
   const [currentTooltipIndex, setCurrentTooltipIndex] = useState(0);
 
   const tooltipMessages = [
-    "🤖 Free AI Assistant powered by HuggingFace",
-    "💬 Ask about Web3 opportunities & career advice",
-    "⚡ Quick business proposals & project ideas",
-    "🎯 Get personalized development guidance",
-    "🚀 Explore next-gen Web3 technologies",
-    "⚡ Nexus Simulate - interactive Web3 scenarios",
-    "🎪 Interactive AI experience",
-    "🌟 Powered by open-source models",
-    "🎮 Simulate Web3 startup launches & DeFi protocols"
+    "🚧 Work in Progress",
+    "⚠️ These features are currently under development",
+    "🔧 Coming Soon - AI Assistant & Nexus Simulate"
   ];
 
   useEffect(() => {
@@ -38,7 +32,7 @@ export default function AIChatButton({ onOpenChat }: AIChatButtonProps) {
   const toggleExpanded = () => setIsExpanded(!isExpanded);
 
   return (
-    <div className="fixed bottom-6 right-6 z-50">
+    <div className="fixed bottom-6 right-6 z-50 blur-sm opacity-60 pointer-events-none">
       {/* Animated Tooltip */}
       <AnimatePresence>
         {showTooltip && !isExpanded && (
@@ -47,7 +41,7 @@ export default function AIChatButton({ onOpenChat }: AIChatButtonProps) {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 10, scale: 0.8 }}
             transition={{ duration: 0.3, type: "spring", stiffness: 300 }}
-            className="absolute bottom-20 right-0 mb-3 bg-black/80 backdrop-blur-md border border-white/20 rounded-xl p-3 shadow-2xl max-w-xs z-[999999] mr-16"
+            className="absolute bottom-20 right-0 mb-3 bg-red-500/90 backdrop-blur-md border border-red-500/50 rounded-xl p-3 shadow-2xl max-w-xs z-[999999] mr-16"
           >
             <motion.div
               key={currentTooltipIndex}
@@ -59,8 +53,14 @@ export default function AIChatButton({ onOpenChat }: AIChatButtonProps) {
             >
               {tooltipMessages[currentTooltipIndex]}
             </motion.div>
+            {/* WIP Badge */}
+            <div className="flex items-center justify-center mt-2">
+              <div className="px-3 py-1 bg-white text-red-500 text-xs rounded-full font-bold">
+                🚧 WIP
+              </div>
+            </div>
             {/* Tooltip arrow */}
-            <div className="absolute top-full right-6 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-black/80"></div>
+            <div className="absolute top-full right-6 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-red-500/90"></div>
           </motion.div>
         )}
       </AnimatePresence>
@@ -74,45 +74,41 @@ export default function AIChatButton({ onOpenChat }: AIChatButtonProps) {
             className="absolute bottom-16 right-0 mb-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-4 shadow-2xl mr-16"
           >
             <div className="space-y-3">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                onClick={() => {
-                  onOpenChat('ai');
-                  setIsExpanded(false);
-                }}
-                className="flex items-center space-x-3 w-full px-4 py-3 bg-gradient-to-r from-purple-500/20 to-blue-500/20 hover:from-purple-500/30 hover:to-blue-500/30 border border-purple-500/30 rounded-xl transition-all duration-200 text-white"
-              >
-                <Sparkles className="w-5 h-5 text-purple-400" />
-                <span className="font-medium">Assistant</span>
-              </motion.button>
+              <div className="relative">
+                <motion.button
+                  disabled
+                  className="flex items-center space-x-3 w-full px-4 py-3 bg-gradient-to-r from-purple-500/20 to-blue-500/20 border border-purple-500/30 rounded-xl transition-all duration-200 text-white opacity-50 cursor-not-allowed"
+                >
+                  <Sparkles className="w-5 h-5 text-purple-400" />
+                  <span className="font-medium">Assistant</span>
+                </motion.button>
+                <div className="absolute -top-2 -right-2 px-2 py-1 bg-red-500 text-white text-xs rounded-full font-semibold">
+                  WIP
+                </div>
+              </div>
               
 
-
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                onClick={() => {
-                  onOpenChat('simulate');
-                  setIsExpanded(false);
-                }}
-                className="flex items-center space-x-3 w-full px-4 py-3 bg-gradient-to-r from-orange-500/20 to-red-500/20 hover:from-orange-500/30 hover:to-red-500/30 border border-orange-500/30 rounded-xl transition-all duration-200 text-white"
-              >
-                <Zap className="w-5 h-5 text-orange-400" />
-                <span className="font-medium">Nexus Simulate</span>
-              </motion.button>
+              <div className="relative">
+                <motion.button
+                  disabled
+                  className="flex items-center space-x-3 w-full px-4 py-3 bg-gradient-to-r from-orange-500/20 to-red-500/20 border border-orange-500/30 rounded-xl transition-all duration-200 text-white opacity-50 cursor-not-allowed"
+                >
+                  <Zap className="w-5 h-5 text-orange-400" />
+                  <span className="font-medium">Nexus Simulate</span>
+                </motion.button>
+                <div className="absolute -top-2 -right-2 px-2 py-1 bg-red-500 text-white text-xs rounded-full font-semibold">
+                  WIP
+                </div>
+              </div>
             </div>
           </motion.div>
         )}
       </AnimatePresence>
 
       <motion.button
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
-        onClick={toggleExpanded}
         onMouseEnter={() => setShowTooltip(true)}
         onMouseLeave={() => setShowTooltip(false)}
-        className="relative w-14 h-14 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 rounded-full shadow-2xl border-2 border-white/20 flex items-center justify-center transition-all duration-300 ai-button"
+        className="relative w-14 h-14 bg-gradient-to-r from-purple-600 to-blue-600 rounded-full shadow-2xl border-2 border-white/20 flex items-center justify-center transition-all duration-300 ai-button cursor-not-allowed"
         animate={{
           boxShadow: [
             "0 0 0 rgba(147, 51, 234, 0)",
@@ -147,6 +143,21 @@ export default function AIChatButton({ onOpenChat }: AIChatButtonProps) {
             </motion.div>
           )}
         </AnimatePresence>
+        {/* WIP Badge */}
+        <motion.div
+          className="absolute -top-1 -right-1 bg-red-500 text-white text-xs px-1.5 py-0.5 rounded-full font-bold"
+          animate={{
+            scale: [1, 1.1, 1],
+            opacity: [0.8, 1, 0.8]
+          }}
+          transition={{
+            duration: 2,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        >
+          WIP
+        </motion.div>
       </motion.button>
     </div>
   );
