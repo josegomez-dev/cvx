@@ -18,14 +18,13 @@ export const projectsWeb3: Web3Project[] = [
     chain: 'Stellar',
     summary: 'The Web3 Early Adopters Program on Stellar blockchain.',
     links: [
-      { label: 'Demo Video', url: 'https://www.youtube.com/watch?v=FuXQtLgDDBE'},
+      { label: 'Demo Video', url: 'https://www.youtube.com/watch?v=1wKEBt0LcUQ'},
       { label: 'Live App', url: 'https://stellar-nexus-experience.vercel.app/' },
-      { label: 'GitHub', url: 'https://github.com/josegomez-dev/trustless-poc'},
-      { label: 'Starter Kit', url: 'https://nexus-starter.vercel.app/'}
+      { label: 'GitHub', url: 'https://github.com/josegomez-dev/stellar-nexus-experience'},
     ],
     year: 2025,
     company: 'Trusless Work',
-    role: 'Product Owner & Developer',
+    role: 'PM & Developer',
   },
   {
     title: 'BlockBeats 3.0',
@@ -40,7 +39,7 @@ export const projectsWeb3: Web3Project[] = [
     ],
     year: 2025,
     company: 'Starknet',
-    role: 'Product Owner & Developer',
+    role: 'Developer',
   },
   {
     title: 'Goatopia',

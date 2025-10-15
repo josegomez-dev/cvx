@@ -337,7 +337,7 @@ export default function TechPage() {
                     { label: 'Store', url: process.env.NEXT_PUBLIC_CATARSIS_STORE || '#' },
                   ]}
                 company="Non-Profit"
-                role="Product Owner & Game Creator"
+                role="Game Creator"
                 year={2024}
                 variant="personal"
               />
@@ -352,7 +352,7 @@ export default function TechPage() {
                     { label: 'GitHub', url: process.env.NEXT_PUBLIC_FESTIVARTES_GITHUB || '#' },
                   ]}
                 company="Non-Profit"
-                role="Product Owner & Developer"
+                role="Developer"
                 year={2025}
                 variant="personal"
               />
@@ -366,7 +366,7 @@ export default function TechPage() {
                     { label: 'Catarsis Musical', url: process.env.NEXT_PUBLIC_CATARSIS_MUSICAL_URL || '#' },
                   ]}
                 company="Non-Profit"
-                role="Product Owner & Developer"
+                role="Developer"
                 variant="personal"
                 year={2021}
               />
